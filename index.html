@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course home page for WDD 231 - Web Frontend Development">
+    <meta name="author" content="Enias Gramu">
+    <title>WDD 231 - Course Home Page</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Site Logo" width="1" height="1">
+        <span>Enias Gramu</span>
+        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="about">
+            <h2>About Me</h2>
+            <p>I am Enias Gramu from Harare, Zimbabwe. I love traveling especially road trips,
+                meeting people from different parts of the world and learning about different cultures.
+                When am not studying or traveling, I will be watching sports (any sport) or you will
+                definitely find me in the garden.</p>
+        </section>
+
+        <section class="student-photo">
+            <h2>Student Photo</h2>
+            <img src="images/enias_gramu.jpeg" alt="Student profile photo" width="300" height="300" loading="lazy">
+        </section>
+
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+            <div class="filter-buttons">
+                <button id="filter-all" class="active">All</button>
+                <button id="filter-wdd">WDD</button>
+                <button id="filter-cse">CSE</button>
+            </div>
+            <div id="course-cards" class="course-grid">
+                <!-- Courses will be dynamically inserted here -->
+            </div>
+            <div class="total-credits">
+                <p>The total credits for course listed above is <span id="total-credits">0</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://eniasg.github.io/wdd231" target="_blank" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub" width="32" height="32" loading="lazy">
+            </a>
+            <a href="https://linkedin.com/in/eniasgramu" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32" loading="lazy">
+            </a>
+            <a href="https://twitter.com/eniasg" target="_blank" aria-label="Twitter">
+                <img src="images/twitter.svg" alt="Twitter" width="32" height="32" loading="lazy">
+            </a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> • Enias Gramu • Harare, Zimbabwe</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
