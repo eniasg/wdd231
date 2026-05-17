@@ -1,4 +1,3 @@
-// Course data array - provided from the assignment
 const courses = [
     {
         subject: 'CSE',
@@ -8,7 +7,7 @@ const courses = [
         certificate: 'Web and Computer Programming',
         description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
         technology: ['Python'],
-        completed: true  // Update based on your actual completion status
+        completed: true
     },
     {
         subject: 'WDD',
@@ -18,7 +17,7 @@ const courses = [
         certificate: 'Web and Computer Programming',
         description: 'This course introduces students to the World Wide Web and to careers in web site design and development.',
         technology: ['HTML', 'CSS'],
-        completed: true  // Update based on your actual completion status
+        completed: true
     },
     {
         subject: 'CSE',
@@ -28,7 +27,7 @@ const courses = [
         certificate: 'Web and Computer Programming',
         description: 'CSE 111 students become more organized, efficient, and powerful computer programmers.',
         technology: ['Python'],
-        completed: true  // Update based on your actual completion status
+        completed: true
     },
     {
         subject: 'CSE',
@@ -38,7 +37,7 @@ const courses = [
         certificate: 'Web and Computer Programming',
         description: 'This course will introduce the notion of classes and objects.',
         technology: ['C#'],
-        completed: true  // Update based on your actual completion status
+        completed: true
     },
     {
         subject: 'WDD',
@@ -48,7 +47,7 @@ const courses = [
         certificate: 'Web and Computer Programming',
         description: 'This course builds on prior experience in Web Fundamentals and programming.',
         technology: ['HTML', 'CSS', 'JavaScript'],
-        completed: true  // Update based on your actual completion status
+        completed: true
     },
     {
         subject: 'WDD',
@@ -58,7 +57,7 @@ const courses = [
         certificate: 'Web and Computer Programming',
         description: 'This course builds on prior experience with Dynamic Web Fundamentals.',
         technology: ['HTML', 'CSS', 'JavaScript'],
-        completed: false  // Update based on your actual completion status
+        completed: false
     }
 ];
 
@@ -99,13 +98,9 @@ function displayCourses(filter = "ALL") {
 
         card.innerHTML = `
             <h3>${getCourseCode(course)}</h3>
-            <div class="course-title">${course.title}</div>
-            <div class="course-credits">Credits: ${course.credits}</div>
-            <div class="technology-badges">${techBadges}</div>
         `;
 
-        // Optional: Add description as tooltip or hidden on small screens
-        // Uncomment if you want to show description
+        // Add description as tooltip or hidden on small screens
         // const description = document.createElement('p');
         // description.className = 'course-description';
         // description.textContent = course.description;
