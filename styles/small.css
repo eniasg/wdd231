@@ -1,0 +1,355 @@
+/* Base styles for all screen sizes (mobile-first) */
+
+:root {
+    /* Color Scheme */
+    --primary-color: #005151;
+    --secondary-color: #FF6B35;
+    --background-color: #F8F9FA;
+    --text-color: #333333;
+    --card-bg: #FFFFFF;
+    --completed-bg: #C8E6C9;
+    --completed-border: #2E7D32;
+    --not-completed-bg: #FFEBEE;
+    --not-completed-border: #C62828;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    /* Typography */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Header Styles */
+header {
+    display: grid;
+    grid-template-columns: 40px auto 44px;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 0.75rem 1rem;
+    gap: 0.75rem;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+header span {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* Hamburger Button */
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 1.75rem;
+    color: white;
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/* Navigation - Mobile (hidden by default) */
+.navigation {
+    display: none;
+    background-color: var(--primary-color);
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navigation li a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.navigation li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navigation li.current a {
+    background-color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+/* About Section */
+.about {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+}
+
+.about p {
+    color: var(--text-color);
+}
+
+/* Student Photo Section */
+.student-photo {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.student-photo img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+/* Courses Section */
+.courses {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-buttons button {
+    background-color: var(--background-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 44px;
+    min-width: 80px;
+}
+
+.filter-buttons button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.filter-buttons button.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Course Grid */
+.course-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.course-card {
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--background-color);
+    border-left: 4px solid var(--primary-color);
+}
+
+.course-card.completed {
+    background-color: var(--completed-bg);
+    border-left-color: var(--completed-border);
+}
+
+.course-card:not(.completed) {
+    background-color: var(--not-completed-bg);
+    border-left-color: var(--not-completed-border);
+}
+
+.course-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.course-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.course-card.completed h3 {
+    color: var(--completed-border);
+}
+
+.course-card:not(.completed) h3 {
+    color: var(--not-completed-border);
+}
+
+.course-card .course-code {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.course-card .course-title {
+    font-size: 0.95rem;
+    margin: 0.25rem 0;
+}
+
+.course-card .course-credits {
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.course-card.completed .course-credits {
+    color: var(--completed-border);
+}
+
+.course-card:not(.completed) .course-credits {
+    color: var(--not-completed-border);
+}
+
+.course-card .technology-badge {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    margin-right: 0.25rem;
+}
+
+/* Total Credits */
+.total-credits {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 2px solid var(--background-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.total-credits span {
+    color: var(--secondary-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.875rem;
+}
+
+#lastModified {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
