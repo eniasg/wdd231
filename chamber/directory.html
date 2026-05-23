@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Business directory for Aspindale Chamber of Commerce - Find local businesses and organizations">
+    <meta name="author" content="Enias Gramu">
+    <title>Aspindale Chamber of Commerce - Business Directory</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Social Media Meta Tags - Facebook Open Graph -->
+    <meta property="og:title" content="Aspindale Chamber of Commerce - Business Directory">
+    <meta property="og:description"
+        content="Discover local businesses in the Aspindale area. Browse our directory of chamber members including restaurants, retailers, and professional services.">
+    <meta property="og:image" content="https://eniasg.github.io/wdd231/chamber/images/og-preview.jpg">
+    <meta property="og:url" content="https://eniasg.github.io/wdd231/chamber/directory.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aspindale Chamber of Commerce">
+
+    <!-- Social Media Meta Tags - X (Twitter) Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aspindale Chamber - Business Directory">
+    <meta name="twitter:description" content="Discover local businesses in the Aspindale area.">
+    <meta name="twitter:image" content="https://eniasg.github.io/wdd231/chamber/images/og-preview.jpg">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/chamber-date.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/chamber-logo.svg" alt="Chamber Logo" width="1" height="1" class="logo">
+        <span>Aspindale Chamber of Commerce</span>
+        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">Events</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="directory-header">
+            <h1>Business Directory</h1>
+            <div class="view-buttons">
+                <button id="grid-view" class="view-btn active" aria-label="Grid view">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7" rx="1" />
+                        <rect x="14" y="3" width="7" height="7" rx="1" />
+                        <rect x="3" y="14" width="7" height="7" rx="1" />
+                        <rect x="14" y="14" width="7" height="7" rx="1" />
+                    </svg>
+                    Grid
+                </button>
+                <button id="list-view" class="view-btn" aria-label="List view">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="8" y1="6" x2="21" y2="6" />
+                        <line x1="8" y1="12" x2="21" y2="12" />
+                        <line x1="8" y1="18" x2="21" y2="18" />
+                        <line x1="3" y1="6" x2="3.01" y2="6" />
+                        <line x1="3" y1="12" x2="3.01" y2="12" />
+                        <line x1="3" y1="18" x2="3.01" y2="18" />
+                    </svg>
+                    List
+                </button>
+            </div>
+        </div>
+        <div id="cards" class="grid-view"></div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>Aspindale Chamber of Commerce</h3>
+                <p>21747 First Street</p>
+                <p>Aspindale, Harare</p>
+                <p>info@aspindalechamber.org.zw</p>
+                <p>+263 77 805 4313</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://x.com/eniasg" target="_blank" aria-label="X (Twitter)">
+                    <img src="images/x.svg" alt="X" width="32" height="32" loading="lazy">
+                </a>
+                <a href="https://linkedin.com/in/eniasgramu" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32" loading="lazy">
+                </a>
+                <a href="https://www.instagram.com/eniasgramu" target="_blank" aria-label="Instagram">
+                    <img src="images/instagram.svg" alt="Instagram" width="32" height="32" loading="lazy">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentyear"></span> Austin Metro Chamber of Commerce</p>
+            <p>Enias Gramu | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
