@@ -1,1 +1,14 @@
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+    <!-- Background circle -->
+    <circle cx="100" cy="100" r="95" fill="#1A3A3A" stroke="#FF8C42" stroke-width="4"/>
+    
+    // Aspindale letter 'A' icon
+    <polygon points="100,45 70,130 85,130 80,145 100,145 100,130 90,130 100,75 110,130 100,130 100,145 120,145 115,130 130,130" fill="#FF8C42"/>
+    
+    // Tree accent
+    <polygon points="145,90 135,90 140,80 130,80 138,67 145,75 152,67 160,80 150,80 155,90" fill="#4CAF50"/>
+    
+    <!-- Text -->
+    <text x="100" y="165" font-family="'Montserrat', Arial, sans-serif" font-size="14" font-weight="bold" fill="#FF8C42" text-anchor="middle" letter-spacing="2">ASPINDALE</text>
+    <text x="100" y="182" font-family="'Montserrat', Arial, sans-serif" font-size="8" fill="white" text-anchor="middle" letter-spacing="1">CHAMBER</text>
+</svg>
