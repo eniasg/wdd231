@@ -1,5 +1,3 @@
-/* Base styles for all screen sizes (mobile-first) */
-
 :root {
     /* Color Scheme */
     --primary-color: #005151;
@@ -7,9 +5,10 @@
     --background-color: #F8F9FA;
     --text-color: #333333;
     --card-bg: #FFFFFF;
-    --gold: #C5A028;
-    --silver: #A8A9AD;
-    --member: #4A90E2;
+    --completed-bg: #C8E6C9;
+    --completed-border: #2E7D32;
+    --not-completed-bg: #FFEBEE;
+    --not-completed-border: #C62828;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
     /* Typography */
@@ -64,7 +63,7 @@ header {
     gap: 0.75rem;
 }
 
-header .logo {
+header img {
     width: 100%;
     height: auto;
     filter: brightness(0) invert(1);
@@ -72,7 +71,7 @@ header .logo {
 
 header span {
     font-family: var(--font-heading);
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: white;
 }
@@ -145,27 +144,57 @@ main {
     padding: 1.5rem;
 }
 
-/* Directory Header */
-.directory-header {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 2rem;
+/* About Section */
+.about {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
 }
 
-.view-buttons {
+.about p {
+    color: var(--text-color);
+}
+
+/* Student Photo Section */
+.student-photo {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.student-photo img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+/* Courses Section */
+.courses {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.filter-buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.view-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.filter-buttons button {
     background-color: var(--background-color);
     border: 2px solid var(--primary-color);
-    padding: 0.5rem 1.25rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 25px;
     font-family: var(--font-heading);
     font-weight: 600;
@@ -173,135 +202,112 @@ main {
     cursor: pointer;
     transition: all 0.3s ease;
     min-height: 44px;
+    min-width: 80px;
 }
 
-.view-btn:hover {
+.filter-buttons button:hover {
     background-color: var(--primary-color);
     color: white;
 }
 
-.view-btn.active {
+.filter-buttons button.active {
     background-color: var(--primary-color);
     color: white;
 }
 
-/* Grid View Styles */
-.grid-view {
+/* Course Grid */
+.course-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.card {
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
+.course-card {
     padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--background-color);
+    border-left: 4px solid var(--primary-color);
 }
 
-.card:hover {
+.course-card.completed {
+    background-color: var(--completed-bg);
+    border-left-color: var(--completed-border);
+}
+
+.course-card:not(.completed) {
+    background-color: var(--not-completed-bg);
+    border-left-color: var(--not-completed-border);
+}
+
+.course-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow);
 }
 
-.card img {
-    width: 100%;
-    max-width: 80px;
-    height: auto;
-    margin: 0 auto 1rem;
-}
-
-.card-content h3 {
+.course-card h3 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.tagline {
-    font-style: italic;
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-}
-
-.address,
-.phone,
-.email {
-    font-size: 0.85rem;
-    margin: 0.25rem 0;
-    word-break: break-word;
-}
-
-.website {
-    display: inline-block;
-    font-size: 0.85rem;
     color: var(--primary-color);
-    text-decoration: none;
+}
+
+.course-card.completed h3 {
+    color: var(--completed-border);
+}
+
+.course-card:not(.completed) h3 {
+    color: var(--not-completed-border);
+}
+
+.course-card .course-code {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.course-card .course-title {
+    font-size: 0.95rem;
+    margin: 0.25rem 0;
+}
+
+.course-card .course-credits {
+    font-weight: bold;
+    font-size: 0.85rem;
     margin-top: 0.5rem;
-    word-break: break-all;
 }
 
-.website:hover {
-    text-decoration: underline;
+.course-card.completed .course-credits {
+    color: var(--completed-border);
 }
 
-/* Badge Styles */
-.badge {
+.course-card:not(.completed) .course-credits {
+    color: var(--not-completed-border);
+}
+
+.course-card .technology-badge {
     display: inline-block;
-    padding: 0.2rem 0.6rem;
-    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
     font-size: 0.7rem;
-    font-weight: 600;
-    font-family: var(--font-heading);
+    margin-top: 0.5rem;
+    margin-right: 0.25rem;
 }
 
-.badge.gold {
-    background-color: var(--gold);
-    color: white;
+/* Total Credits */
+.total-credits {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 2px solid var(--background-color);
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
-.badge.silver {
-    background-color: var(--silver);
-    color: white;
-}
-
-.badge.member {
-    background-color: var(--member);
-    color: white;
-}
-
-/* List View Styles */
-.list-view .directory-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-}
-
-.list-view .directory-table th {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem;
-    text-align: left;
-    font-family: var(--font-heading);
-}
-
-.list-view .directory-table td {
-    padding: 1rem;
-    border-bottom: 1px solid #eee;
-    vertical-align: top;
-}
-
-.list-view .directory-table tr:hover {
-    background-color: var(--background-color);
+.total-credits span {
+    color: var(--secondary-color);
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 /* Footer */
@@ -309,28 +315,16 @@ footer {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
+    padding: 1.5rem;
     margin-top: 2rem;
-}
-
-.footer-content {
-    padding: 2rem 1rem 1rem;
-}
-
-.footer-contact h3 {
-    color: white;
-    margin-bottom: 0.5rem;
-}
-
-.footer-contact p {
-    margin: 0.25rem 0;
-    font-size: 0.875rem;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    margin: 1.5rem 0;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
 
 .social-icons a {
@@ -348,50 +342,12 @@ footer {
     filter: brightness(0) invert(1);
 }
 
-.footer-bottom {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 1rem;
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.875rem;
+}
+
+#lastModified {
     font-size: 0.75rem;
-}
-
-.footer-bottom p {
-    margin: 0.25rem 0;
-}
-
-.error {
-    text-align: center;
-    color: #d32f2f;
-    padding: 2rem;
-}
-
-/* Responsive adjustments for mobile */
-@media screen and (max-width: 640px) {
-
-    .list-view .directory-table,
-    .list-view .directory-table thead,
-    .list-view .directory-table tbody,
-    .list-view .directory-table tr,
-    .list-view .directory-table td {
-        display: block;
-    }
-
-    .list-view .directory-table thead {
-        display: none;
-    }
-
-    .list-view .directory-table td {
-        padding: 0.75rem;
-        border-bottom: 1px solid #eee;
-        position: relative;
-        padding-left: 50%;
-    }
-
-    .list-view .directory-table td:before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0.75rem;
-        width: 45%;
-        font-weight: bold;
-        color: var(--primary-color);
-    }
+    opacity: 0.8;
 }
