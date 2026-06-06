@@ -1,1 +1,88 @@
-
+{
+    "members": [
+        {
+            "id": 1,
+            "name": "IDWEB",
+            "address": "21747, Aspindale, Harare",
+            "phone": "+263 77 805 4313",
+            "website": "https://idwebsites.com/",
+            "image": "idweb-logo.svg",
+            "membershipLevel": 3,
+            "tagline": "Web Development & Hosting Solutions",
+            "email": "info@idwebsites.com",
+            "description": "Professional web development and hosting services for businesses of all sizes."
+        },
+        {
+            "id": 2,
+            "name": "Surge Web Design",
+            "address": "21747, Aspindale, Harare",
+            "phone": "+263 77 805 4313",
+            "website": "https://www.surgewebdesign.com/",
+            "image": "surge-logo.svg",
+            "membershipLevel": 2,
+            "tagline": "Creative Web Design That Surges Your Business",
+            "email": "hello@surgewebdesign.com",
+            "description": "Award-winning web design and digital marketing agency."
+        },
+        {
+            "id": 3,
+            "name": "Graphic Zen",
+            "address": "21747, Aspindale, Harare",
+            "phone": "+263 77 805 4313",
+            "website": "https://graphiczen.com/",
+            "image": "graphiczen-logo.svg",
+            "membershipLevel": 2,
+            "tagline": "Design. Relax. Succeed.",
+            "email": "design@graphiczen.com",
+            "description": "Full-service graphic design and branding studio."
+        },
+        {
+            "id": 4,
+            "name": "Peppershock Media",
+            "address": "21747, Aspindale, Harare",
+            "phone": "+263 77 805 4313",
+            "website": "https://www.peppershock.com/",
+            "image": "peppershock-logo.svg",
+            "membershipLevel": 3,
+            "tagline": "Your Partner in Digital Success",
+            "email": "info@peppershock.com",
+            "description": "Digital marketing, video production, and social media management."
+        },
+        {
+            "id": 5,
+            "name": "Flash Tech Services",
+            "address": "21747, Aspindale, Harare",
+            "phone": "+263 77 805 4313",
+            "website": "https://flashtechnicalservices.com/",
+            "image": "flashtech-logo.svg",
+            "membershipLevel": 1,
+            "tagline": "Fast. Reliable. Technical.",
+            "email": "support@flashtech.com",
+            "description": "IT support and technical services for small businesses."
+        },
+        {
+            "id": 6,
+            "name": "Express Car Wash",
+            "address": "21747, Aspindale, Harare",
+            "phone": "+263 77 805 4313",
+            "website": "https://expresscarwash.com/",
+            "image": "express-logo.svg",
+            "membershipLevel": 1,
+            "tagline": "Clean Fast, Shine Last",
+            "email": "info@expresscarwash.com",
+            "description": "Express car wash and detailing services."
+        },
+        {
+            "id": 7,
+            "name": "Roaring Services",
+            "address": "21747, Aspindale, Harare",
+            "phone": "+263 77 805 4313",
+            "website": "https://roaringservices.com/",
+            "image": "roaring-logo.svg",
+            "membershipLevel": 2,
+            "tagline": "Making Your Business Roar",
+            "email": "contact@roaringservices.com",
+            "description": "Business consulting and professional services."
+        }
+    ]
+}
