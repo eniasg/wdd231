@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for joining the Aspindale Chamber of Commerce">
+    <meta name="author" content="Enias Gramu">
+    <title>Thank You - Aspindale Chamber of Commerce</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/chamber-logo.svg" alt="Aspindale Chamber of Commerce logo" width="50" height="50">
+        <span>Aspindale Chamber</span>
+        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">Events</a></li>
+        </ul>
+    </nav>
+
+    <main class="thankyou-main">
+        <div class="thankyou-card">
+            <h1>Thank You for Your Application! 🎉</h1>
+            <p>Your membership application has been received. A chamber representative will contact you within 2-3
+                business days.</p>
+
+            <h2>Application Summary</h2>
+            <div class="summary-grid" id="summaryContainer">
+                <p>Loading application data...</p>
+            </div>
+
+            <a href="index.html" class="back-home-btn">Return to Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>Aspindale Chamber of Commerce</h3>
+                <p>21747 First Street</p>
+                <p>Aspindale, Harare</p>
+                <p>info@aspindalechamber.org.zw</p>
+                <p>+263 77 805 4313</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://x.com/eniasg" target="_blank" aria-label="X (Twitter)">
+                    <img src="images/x.svg" alt="X" width="32" height="32">
+                </a>
+                <a href="https://linkedin.com/in/eniasgramu" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+                </a>
+                <a href="https://www.instagram.com/eniasgramu" target="_blank" aria-label="Instagram">
+                    <img src="images/instagram.svg" alt="Instagram" width="32" height="32">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentyear"></span> Aspindale Chamber of Commerce</p>
+            <p>Enias Gramu | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/chamber-date.js"></script>
+    <script src="scripts/thankyou.js"></script>
+</body>
+
+</html>
