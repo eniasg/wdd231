@@ -4,8 +4,8 @@
 const lat = -17.78;  // Approximate latitude for Harare/Aspindale area
 const lon = 31.05;   // Approximate longitude
 
-// API key - REPLACE WITH YOUR ACTUAL OPENWEATHERMAP API KEY
-const apiKey = 'YOUR_API_KEY_HERE';
+// API key 
+const apiKey = '';
 
 // DOM Elements
 const currentTemp = document.querySelector('#current-temp');
