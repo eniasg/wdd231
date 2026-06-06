@@ -1,25 +1,27 @@
+/* Large screen styles - applies from 768px and up */
+
 @media screen and (min-width: 768px) {
 
     /* Header layout */
     header {
-        grid-template-columns: 48px auto 1fr;
+        grid-template-columns: 60px auto 1fr;
         padding: 1rem 2rem;
     }
 
     header img {
-        width: 48px;
+        width: 60px;
     }
 
     header span {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
-    /* Hide hamburger button */
+    /* Hide hamburger button on large screens */
     .hamburger {
         display: none;
     }
 
-    /* Navigation */
+    /* Navigation - always visible on large screens */
     .navigation {
         display: block !important;
         background-color: var(--primary-color);
@@ -41,56 +43,109 @@
         padding: 0.75rem 1.5rem;
     }
 
-    /* Main content layout */
+    /* Main content */
     main {
         padding: 2rem;
-    }
-
-    /* Two-column layout for about and photo */
-    main {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 1.5rem;
     }
 
     h1 {
-        grid-column: 1 / -1;
+        font-size: 2rem;
     }
 
-    .about {
-        margin-bottom: 0;
-        grid-column: 1 / 2;
+    /* Hero overlay */
+    .hero-overlay h1 {
+        font-size: 2rem;
     }
 
-    .student-photo {
-        margin-bottom: 0;
-        grid-column: 2 / 3;
+    .hero-overlay p {
+        font-size: 1.1rem;
     }
 
-    .courses {
-        grid-column: 1 / -1;
-    }
-
-    /* Course grid - 2 or 3 columns on desktop */
-    .course-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Events grid - 3 columns on desktop */
+    .events-grid {
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
     }
 
-    .course-card:hover {
-        transform: translateY(-4px);
+    /* Weather container - row layout */
+    .weather-container {
+        flex-direction: row;
+        align-items: stretch;
     }
 
-    /* Footer */
-    footer {
-        margin-top: 3rem;
+    .current-weather {
+        flex: 1;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .forecast {
+        flex: 2;
+    }
+
+    /* Spotlights grid - 3 columns */
+    .spotlights-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Footer layout */
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
         padding: 2rem;
+        text-align: left;
+    }
+
+    .footer-contact {
+        text-align: left;
+    }
+
+    .social-icons {
+        margin: 0;
+    }
+
+    .footer-bottom p {
+        display: inline-block;
+        margin: 0 1rem;
+    }
+
+    .join-layout {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .form-container {
+        flex: 2;
+    }
+
+    .membership-cards {
+        flex: 1;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-container form {
+        gap: 1.25rem;
     }
 }
 
 /* Extra large screens (1024px and up) */
 @media screen and (min-width: 1024px) {
-    .course-grid {
+    .grid-view {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .events-grid {
+        gap: 2rem;
+    }
+
+    .spotlights-grid {
+        gap: 2rem;
     }
 }
