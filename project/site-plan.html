@@ -1,1 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site plan for the Zimbabwe Wildlife Conservation Network website project">
+    <meta name="author" content="Your Name">
+    <title>Zimbabwe Wildlife Conservation Network - Site Plan</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>🌿 Zimbabwe Wildlife Conservation Network</h1>
+        <p>Site Plan | WDD 231 - Individual Website Project</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#site-name">Site Name</a></li>
+            <li><a href="#purpose">Purpose</a></li>
+            <li><a href="#scenarios">Scenarios</a></li>
+            <li><a href="#colors">Colors</a></li>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#wireframes">Wireframes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Site Name Section -->
+        <section id="site-name">
+            <h2>🌍 Site Name</h2>
+            <h3>Zimbabwe Wildlife Conservation Network</h3>
+            <p><strong>Why this name was selected:</strong> This name clearly communicates the website's focus on
+                wildlife conservation specifically in Zimbabwe. It establishes the site as a hub for conservation
+                information, connecting visitors with Zimbabwe's unique wildlife heritage and preservation efforts. The
+                name is descriptive, memorable, and immediately conveys the site's purpose to potential visitors.</p>
+            <p><strong>Domain (for reference):</strong> zimbabwe-wildlife-conservation.org</p>
+        </section>
+
+        <!-- Site Purpose Section -->
+        <section id="purpose">
+            <h2>🎯 Site Purpose</h2>
+            <p>The Zimbabwe Wildlife Conservation Network website serves as an educational and engagement hub for
+                wildlife conservation in Zimbabwe. The site provides:</p>
+            <ul>
+                <li>Information about Zimbabwe's national parks and wildlife reserves (Hwange, Mana Pools, Gonarezhou,
+                    Matobo Hills)</li>
+                <li>Profiles of endangered and native wildlife species (elephants, rhinos, lions, African wild dogs,
+                    painted wolves)</li>
+                <li>Conservation success stories and current challenges</li>
+                <li>Ways for visitors to get involved through donations, volunteer opportunities, and wildlife adoption
+                    programs</li>
+                <li>Integration of live weather data for major parks using OpenWeatherMap API</li>
+                <li>Interactive Google Maps showing park locations</li>
+            </ul>
+        </section>
+
+        <!-- Scenarios Section -->
+        <section id="scenarios">
+            <h2>❓ User Scenarios</h2>
+
+            <h3>Scenario 1: The Wildlife Enthusiast</h3>
+            <p><strong>User:</strong> Sarah, a 34-year-old wildlife photographer planning a trip to Zimbabwe.</p>
+            <p><strong>Question:</strong> "Which national park in Zimbabwe offers the best opportunity to see elephants
+                in their natural habitat, and what is the current weather like there?"</p>
+            <p><strong>How the site answers:</strong> The site provides detailed park guides with elephant population
+                information, best viewing seasons, and live weather data from the OpenWeatherMap API for each location.
+            </p>
+
+            <h3>Scenario 2: The Conservation Donor</h3>
+            <p><strong>User:</strong> Michael, a 45-year-old retired teacher who wants to support wildlife conservation
+                but doesn't know where to start.</p>
+            <p><strong>Question:</strong> "How can I donate to help protect rhinos from poaching in Zimbabwe, and how
+                will my money be used?"</p>
+            <p><strong>How the site answers:</strong> The site includes a "Get Involved" page with donation options,
+                adoption programs, and transparency reports showing how funds are allocated to conservation projects.
+            </p>
+
+            <h3>Scenario 3: The Student Researcher</h3>
+            <p><strong>User:</strong> David, a 19-year-old university student researching African wild dog conservation.
+            </p>
+            <p><strong>Question:</strong> "What are the current population numbers for African wild dogs in Zimbabwe,
+                and what conservation efforts are underway?"</p>
+            <p><strong>How the site answers:</strong> The site provides species profiles with population data and
+                conservation status.</p>
+        </section>
+
+        <!-- Color Scheme Section -->
+        <section id="colors">
+            <h2>🎨 Color Scheme</h2>
+            <div class="color-swatches">
+                <div class="swatch">
+                    <div class="color-box" style="background-color: #1B5E20;"></div>
+                    <p><strong>Dark Green</strong><br>#1B5E20</p>
+                    <p>Headers, Footer, Navigation background</p>
+                </div>
+                <div class="swatch">
+                    <div class="color-box" style="background-color: #2E7D32;"></div>
+                    <p><strong>Medium Green</strong><br>#2E7D32</p>
+                    <p>Active links, Section borders</p>
+                </div>
+                <div class="swatch">
+                    <div class="color-box" style="background-color: #4CAF50;"></div>
+                    <p><strong>Light Green</strong><br>#4CAF50</p>
+                    <p>Hover states, Success messages</p>
+                </div>
+                <div class="swatch">
+                    <div class="color-box" style="background-color: #FF8F00;"></div>
+                    <p><strong>Amber/Gold</strong><br>#FF8F00</p>
+                    <p>Buttons, Highlights, Accents</p>
+                </div>
+                <div class="swatch">
+                    <div class="color-box" style="background-color: #F5F5F0;"></div>
+                    <p><strong>Warm Off-White</strong><br>#F5F5F0</p>
+                    <p>Page background</p>
+                </div>
+                <div class="swatch">
+                    <div class="color-box" style="background-color: #2C2C2C;"></div>
+                    <p><strong>Dark Gray</strong><br>#2C2C2C</p>
+                    <p>Body text</p>
+                </div>
+            </div>
+            <p><strong>Color Usage Summary:</strong></p>
+            <ul>
+                <li><strong style="color:#1B5E20;">Dark Green (#1B5E20):</strong> Main headers, footer background</li>
+                <li><strong style="color:#2E7D32;">Medium Green (#2E7D32):</strong> Navigation bar, section headings
+                    border</li>
+                <li><strong style="color:#4CAF50;">Light Green (#4CAF50):</strong> Hover effects, success indicators
+                </li>
+                <li><strong style="color:#FF8F00;">Amber (#FF8F00):</strong> Call-to-action buttons, important
+                    highlights</li>
+                <li><strong style="color:#F5F5F0;">Warm Off-White (#F5F5F0):</strong> Main background color</li>
+                <li><strong style="color:#2C2C2C;">Dark Gray (#2C2C2C):</strong> Primary body text</li>
+            </ul>
+        </section>
+
+        <!-- Typography Section -->
+        <section id="typography">
+            <h2>✍️ Typography</h2>
+            <h3>Montserrat (Headings)</h3>
+            <p style="font-family: 'Montserrat', sans-serif; font-size: 1.1rem;">The quick brown fox jumps over the lazy
+                dog. 1234567890</p>
+            <p><strong>Usage:</strong> All headings (h1-h6), navigation links, button text.</p>
+
+            <h3>Open Sans (Body Text)</h3>
+            <p style="font-family: 'Open Sans', sans-serif; font-size: 1rem;">The quick brown fox jumps over the lazy
+                dog. 1234567890</p>
+            <p><strong>Usage:</strong> All body text, paragraphs, descriptions, and form labels. Open Sans is highly
+                readable on screens and pairs beautifully with Montserrat.</p>
+        </section>
+
+        <!-- Wireframes Section -->
+        <section id="wireframes">
+            <h2>📱 Wireframes</h2>
+            <div class="wireframes">
+                <!-- Mobile Wireframe -->
+                <div class="wireframe-card">
+                    <h3>Mobile View (≤ 640px)</h3>
+                    <svg class="wireframe-svg" viewBox="0 0 320 600" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Phone frame -->
+                        <rect width="320" height="600" fill="#f0f0f0" rx="10" stroke="#ccc" stroke-width="2" />
+
+                        <!-- Header -->
+                        <rect x="0" y="0" width="320" height="60" fill="#1B5E20" />
+                        <text x="160" y="35" text-anchor="middle" fill="white" font-size="12" font-family="Arial">ZWCN
+                            Logo</text>
+
+                        <!-- Hamburger Menu -->
+                        <rect x="15" y="20" width="25" height="3" fill="white" />
+                        <rect x="15" y="28" width="25" height="3" fill="white" />
+                        <rect x="15" y="36" width="25" height="3" fill="white" />
+                        <text x="280" y="35" text-anchor="middle" fill="white" font-size="10"
+                            font-family="Arial">☰</text>
+
+                        <!-- Hero Image Area -->
+                        <rect x="15" y="75" width="290" height="150" fill="#4CAF50" rx="8" />
+                        <text x="160" y="145" text-anchor="middle" fill="white" font-size="14" font-family="Arial">Hero
+                            Image</text>
+                        <text x="160" y="165" text-anchor="middle" fill="white" font-size="10"
+                            font-family="Arial">Elephant in Hwange</text>
+
+                        <!-- CTA Button -->
+                        <rect x="80" y="240" width="160" height="35" fill="#FF8F00" rx="20" />
+                        <text x="160" y="262" text-anchor="middle" fill="white" font-size="12"
+                            font-family="Arial">Donate Now</text>
+
+                        <!-- Section 1 -->
+                        <rect x="15" y="295" width="290" height="80" fill="white" rx="5" stroke="#ddd"
+                            stroke-width="1" />
+                        <rect x="15" y="295" width="4" height="80" fill="#FF8F00" rx="2" />
+                        <text x="30" y="318" fill="#1B5E20" font-size="12" font-weight="bold"
+                            font-family="Arial">Wildlife Spotlight</text>
+                        <text x="30" y="338" fill="#666" font-size="10" font-family="Arial">African Elephant
+                            population</text>
+                        <text x="30" y="355" fill="#666" font-size="10" font-family="Arial">updates in Hwange...</text>
+
+                        <!-- Section 2 -->
+                        <rect x="15" y="385" width="290" height="80" fill="white" rx="5" stroke="#ddd"
+                            stroke-width="1" />
+                        <rect x="15" y="385" width="4" height="80" fill="#4CAF50" rx="2" />
+                        <text x="30" y="408" fill="#1B5E20" font-size="12" font-weight="bold" font-family="Arial">Park
+                            Weather</text>
+                        <text x="30" y="428" fill="#666" font-size="10" font-family="Arial">Hwange: 75°F | Sunny</text>
+                        <text x="30" y="445" fill="#666" font-size="10" font-family="Arial">Mana Pools: 82°F |
+                            Clear</text>
+
+                        <!-- Section 3 -->
+                        <rect x="15" y="475" width="290" height="80" fill="white" rx="5" stroke="#ddd"
+                            stroke-width="1" />
+                        <rect x="15" y="475" width="4" height="80" fill="#2E7D32" rx="2" />
+                        <text x="30" y="498" fill="#1B5E20" font-size="12" font-weight="bold" font-family="Arial">Get
+                            Involved</text>
+                        <text x="30" y="518" fill="#666" font-size="10" font-family="Arial">Volunteer
+                            opportunities</text>
+                        <text x="30" y="535" fill="#666" font-size="10" font-family="Arial">Wildlife adoption
+                            program</text>
+
+                        <!-- Footer -->
+                        <rect x="0" y="570" width="320" height="30" fill="#1B5E20" />
+                        <text x="160" y="590" text-anchor="middle" fill="white" font-size="8" font-family="Arial">© 2026
+                            Zimbabwe Wildlife Conservation</text>
+                    </svg>
+                    <p><strong>Mobile Layout Features:</strong> Stacked vertical layout, hamburger menu navigation,
+                        full-width hero image, stacked content sections, prominent call-to-action button.</p>
+                </div>
+
+                <!-- Desktop Wireframe -->
+                <div class="wireframe-card">
+                    <h3>Desktop View (≥ 1024px)</h3>
+                    <svg class="wireframe-svg" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Desktop frame -->
+                        <rect width="600" height="500" fill="#f0f0f0" rx="5" stroke="#ccc" stroke-width="1" />
+
+                        <!-- Header -->
+                        <rect x="0" y="0" width="600" height="60" fill="#1B5E20" />
+                        <text x="30" y="35" fill="white" font-size="16" font-weight="bold" font-family="Arial">ZWCN
+                            Logo</text>
+
+                        <!-- Desktop Navigation -->
+                        <text x="350" y="35" fill="white" font-size="12" font-family="Arial">Home</text>
+                        <text x="420" y="35" fill="white" font-size="12" font-family="Arial">Wildlife</text>
+                        <text x="500" y="35" fill="white" font-size="12" font-family="Arial">Parks</text>
+                        <text x="560" y="35" fill="white" font-size="12" font-family="Arial">Get Involved</text>
+
+                        <!-- Hero Section with overlay -->
+                        <rect x="0" y="60" width="600" height="200" fill="#4CAF50" />
+                        <text x="300" y="130" text-anchor="middle" fill="white" font-size="22" font-weight="bold"
+                            font-family="Arial">Hero Banner Image</text>
+                        <text x="300" y="160" text-anchor="middle" fill="white" font-size="14"
+                            font-family="Arial">Protecting Zimbabwe's Wildlife Heritage</text>
+
+                        <!-- CTA Button -->
+                        <rect x="250" y="190" width="100" height="30" fill="#FF8F00" rx="15" />
+                        <text x="300" y="210" text-anchor="middle" fill="white" font-size="12"
+                            font-family="Arial">Donate</text>
+
+                        <!-- 3-Column Grid for Content -->
+                        <rect x="20" y="280" width="175" height="130" fill="white" rx="5" stroke="#ddd"
+                            stroke-width="1" />
+                        <rect x="20" y="280" width="175" height="4" fill="#FF8F00" />
+                        <text x="107" y="310" text-anchor="middle" fill="#1B5E20" font-size="12" font-weight="bold"
+                            font-family="Arial">Wildlife</text>
+                        <text x="107" y="335" text-anchor="middle" fill="#666" font-size="10"
+                            font-family="Arial">Species profiles</text>
+                        <text x="107" y="355" text-anchor="middle" fill="#666" font-size="10"
+                            font-family="Arial">Conservation status</text>
+                        <text x="107" y="375" text-anchor="middle" fill="#666" font-size="10" font-family="Arial">View
+                            →</text>
+
+                        <rect x="212" y="280" width="175" height="130" fill="white" rx="5" stroke="#ddd"
+                            stroke-width="1" />
+                        <rect x="212" y="280" width="175" height="4" fill="#4CAF50" />
+                        <text x="300" y="310" text-anchor="middle" fill="#1B5E20" font-size="12" font-weight="bold"
+                            font-family="Arial">Parks</text>
+                        <text x="300" y="335" text-anchor="middle" fill="#666" font-size="10" font-family="Arial">Park
+                            guides & maps</text>
+                        <text x="300" y="355" text-anchor="middle" fill="#666" font-size="10" font-family="Arial">Live
+                            weather</text>
+                        <text x="300" y="375" text-anchor="middle" fill="#666" font-size="10"
+                            font-family="Arial">Explore →</text>
+
+                        <rect x="405" y="280" width="175" height="130" fill="white" rx="5" stroke="#ddd"
+                            stroke-width="1" />
+                        <rect x="405" y="280" width="175" height="4" fill="#2E7D32" />
+                        <text x="492" y="310" text-anchor="middle" fill="#1B5E20" font-size="12" font-weight="bold"
+                            font-family="Arial">Get Involved</text>
+                        <text x="492" y="335" text-anchor="middle" fill="#666" font-size="10" font-family="Arial">Donate
+                            / Volunteer</text>
+                        <text x="492" y="355" text-anchor="middle" fill="#666" font-size="10" font-family="Arial">Adopt
+                            an animal</text>
+                        <text x="492" y="375" text-anchor="middle" fill="#666" font-size="10" font-family="Arial">Join
+                            →</text>
+
+                        <!-- Footer -->
+                        <rect x="0" y="430" width="600" height="70" fill="#1B5E20" />
+                        <text x="300" y="455" text-anchor="middle" fill="white" font-size="10"
+                            font-family="Arial">Contact: info@zwconservation.org | (+263) 77 805 4313</text>
+                        <text x="300" y="475" text-anchor="middle" fill="white" font-size="9" font-family="Arial">© 2026
+                            Zimbabwe Wildlife Conservation Network</text>
+                    </svg>
+                    <p><strong>Desktop Layout Features:</strong> Horizontal navigation menu, full-width hero section
+                        with overlay text, 3-column responsive grid for main content, multi-column footer.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Site Plan for Zimbabwe Wildlife Conservation Network | WDD 231 - Individual Website Project</p>
+        <p>Created by Enias Gramu | © 2026</p>
+    </footer>
+</body>
+
+</html>
