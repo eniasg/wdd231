@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Zimbabwe Wildlife Conservation Network - Protecting Zimbabwe's wildlife heritage through conservation, education, and community engagement.">
+    <meta name="author" content="Enias Gramu">
+    <title>ZWCN - Zimbabwe Wildlife Conservation Network</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Zimbabwe Wildlife Conservation Network">
+    <meta property="og:description" content="Protecting Zimbabwe's wildlife heritage.">
+    <meta property="og:image" content="https://eniasg.github.io/wdd231/finalproject/images/og-preview.jpg">
+    <meta property="og:url" content="https://eniasg.github.io/wdd231/finalproject/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ZWCN">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zimbabwe Wildlife Conservation Network">
+    <meta name="twitter:description" content="Protecting Zimbabwe's wildlife heritage.">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="ZWCN Logo" width="50" height="50">
+        <span>ZWCN</span>
+        <button id="nav-button" class="hamburger" aria-label="Toggle navigation menu"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="species.html">Wildlife Species</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero.webp" type="image/webp">
+                <img src="images/hero.webp" alt="Elephants in Hwange National Park" loading="lazy">
+            </picture>
+            <div class="hero-overlay">
+                <h1>Protecting Zimbabwe's Wildlife</h1>
+                <p>Preserving our natural heritage for future generations</p>
+                <a href="get-involved.html" class="cta-button">Join the Mission →</a>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats">
+            <div class="stat-card">
+                <span class="stat-number" data-target="45000">0</span>
+                <p>Elephants Protected</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" data-target="1200">0</span>
+                <p>Rhinos Safeguarded</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" data-target="15">0</span>
+                <p>National Parks</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" data-target="5000">0</span>
+                <p>Community Members</p>
+            </div>
+        </section>
+
+        <!-- Featured -->
+        <section class="featured">
+            <h2>Featured Wildlife</h2>
+            <div class="featured-grid" id="featured-grid">
+                <p>Loading featured species...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Zimbabwe Wildlife Conservation Network</h3>
+                <p>📍 Harare, Zimbabwe</p>
+                <p>📧 info@zwcn.org</p>
+                <p>📞 +263 77 805 4313</p>
+            </div>
+            <div class="footer-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="#" target="_blank">Video Walkthrough</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentyear"></span> ZWCN | Enias Gramu | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/navigation.js"></script>
+    <script type="module" src="scripts/date.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>
