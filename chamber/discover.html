@@ -4,12 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Thank you for joining the Aspindale Chamber of Commerce">
+    <meta name="description" content="Discover the beautiful attractions and points of interest in Aspindale, Zimbabwe">
     <meta name="author" content="Enias Gramu">
-    <title>Thank You - Aspindale Chamber of Commerce</title>
+    <title>Aspindale Chamber of Commerce - Discover Aspindale</title>
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Discover Aspindale - Chamber of Commerce">
+    <meta property="og:description"
+        content="Explore the beautiful attractions, parks, and cultural sites in Aspindale, Zimbabwe.">
+    <meta property="og:image" content="https://eniasg.github.io/wdd231/chamber/images/og-preview.jpg">
+    <meta property="og:url" content="https://eniasg.github.io/wdd231/chamber/discover.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aspindale Chamber of Commerce">
+
+    <!-- X (Twitter) Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discover Aspindale">
+    <meta name="twitter:description" content="Explore attractions in Aspindale, Zimbabwe.">
 
     <!-- Google Fonts -->
     <link
@@ -19,6 +34,7 @@
     <!-- CSS files -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
 </head>
 
@@ -34,23 +50,20 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html">Join</a></li>
-            <li><a href="discover.html">Discover</a></li>
+            <li class="current"><a href="discover.html">Discover</a></li>
             <li><a href="#">Events</a></li>
         </ul>
     </nav>
 
-    <main class="thankyou-main">
-        <div class="thankyou-card">
-            <h1>Thank You for Your Application! 🎉</h1>
-            <p>Your membership application has been received. A chamber representative will contact you within 2-3
-                business days.</p>
+    <main class="discover-main">
+        <h1>Discover Aspindale</h1>
 
-            <h2>Application Summary</h2>
-            <div class="summary-grid" id="summaryContainer">
-                <p>Loading application data...</p>
-            </div>
+        <!-- Visit Message -->
+        <div id="visit-message" class="visit-message"></div>
 
-            <a href="index.html" class="back-home-btn">Return to Home</a>
+        <!-- Interest Cards Grid - Using Named Grid Areas -->
+        <div class="discover-grid" id="discover-grid">
+            <!-- Cards will be dynamically inserted here -->
         </div>
     </main>
 
@@ -82,9 +95,10 @@
         </div>
     </footer>
 
-    <script src="scripts/navigation.js"></script>
-    <script src="scripts/chamber-date.js"></script>
-    <script src="scripts/thankyou.js"></script>
+    <!-- JavaScript - Module type for importing JSON data -->
+    <script type="module" src="scripts/navigation.js"></script>
+    <script type="module" src="scripts/chamber-date.js"></script>
+    <script type="module" src="scripts/discover.js"></script>
 </body>
 
 </html>
