@@ -1,0 +1,47 @@
+/* small.css - Mobile-first styles (320px - 640px) */
+
+@media screen and (max-width: 640px) {
+    .hero-overlay h1 {
+        font-size: 1.25rem;
+    }
+    
+    .hero-overlay p {
+        font-size: 0.875rem;
+    }
+    
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .featured-grid,
+    .species-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .involvement-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-buttons {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .filter-btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.75rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+}
