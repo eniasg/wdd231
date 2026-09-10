@@ -1,0 +1,91 @@
+/* large.css - Large screen styles */
+
+@media screen and (min-width: 768px) {
+
+    /* Header */
+    header {
+        grid-template-columns: 48px auto 1fr;
+        padding: 1rem 2rem;
+    }
+
+    header img {
+        width: 48px;
+    }
+
+    header span {
+        font-size: 1.5rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block !important;
+        background-color: var(--primary-color);
+    }
+
+    .navigation ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .navigation li {
+        border-bottom: none;
+    }
+
+    .navigation li a {
+        padding: 0.75rem 1.5rem;
+    }
+
+    /* Main */
+    main {
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+    }
+
+    h1 {
+        grid-column: 1 / -1;
+    }
+
+    .about {
+        margin-bottom: 0;
+        grid-column: 1 / 2;
+    }
+
+    .student-photo {
+        margin-bottom: 0;
+        grid-column: 2 / 3;
+    }
+
+    .courses {
+        grid-column: 1 / -1;
+    }
+
+    /* Course Grid */
+    .course-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .course-card:hover {
+        transform: translateY(-4px);
+    }
+
+    /* Footer */
+    footer {
+        margin-top: 3rem;
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
