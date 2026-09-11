@@ -3,11 +3,12 @@
 :root {
     --primary-color: #005151;
     --secondary-color: #FF6B35;
+    --secondary-dark: #B34700;
     --background-color: #F8F9FA;
     --text-color: #333333;
     --card-bg: #FFFFFF;
     --completed-bg: #C8E6C9;
-    --completed-border: #2E7D32;
+    --completed-border: #1B5E20;
     --not-completed-bg: #FFEBEE;
     --not-completed-border: #C62828;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -132,7 +133,7 @@ header span {
 }
 
 .navigation li.current a {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-dark);
     font-weight: 700;
 }
 
@@ -290,7 +291,7 @@ main {
 }
 
 .total-credits span {
-    color: var(--secondary-color);
+    color: var(--secondary-dark);
     font-size: 1.25rem;
     font-weight: 700;
 }
