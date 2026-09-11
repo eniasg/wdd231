@@ -90,11 +90,11 @@ function displayCourses(filter = 'ALL') {
 
         card.innerHTML = `
             <h3>${getCourseCode(course)}</h3>
-            <div class="course-title">${course.title}</div>
-            <div class="course-credits">Credits: ${course.credits}</div>
         `;
         container.appendChild(card);
     });
+    // <div class="course-title">${course.title}</div>
+    // <div class="course-credits">Credits: ${course.credits}</div>
 
     // Update total credits using reduce
     const total = filtered.reduce((sum, course) => sum + course.credits, 0);
