@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Business directory for Aspindale Chamber of Commerce - Find local businesses and organizations">
+    <meta name="author" content="Your Name">
+    <title>Aspindale Chamber of Commerce - Business Directory</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Aspindale Chamber of Commerce - Business Directory">
+    <meta property="og:description"
+        content="Discover local businesses in the Aspindale area. Browse our directory of chamber members including retailers, professional services, and more.">
+    <meta property="og:image" content="https://eniasg.github.io/wdd231/chamber/images/og-preview.jpg">
+    <meta property="og:url" content="https://eniasg.github.io/wdd231/chamber/directory.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aspindale Chamber of Commerce">
+
+    <!-- Google Fonts with preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- JavaScript with defer -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/chamber-date.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/chamber-logo.svg" alt="Aspindale Chamber of Commerce logo" width="50" height="50">
+        <span>Aspindale Chamber</span>
+        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="directory-header">
+            <h1>Business Directory</h1>
+            <div class="view-buttons">
+                <button id="grid-view" class="view-btn active" aria-label="Grid view">Grid View</button>
+                <button id="list-view" class="view-btn" aria-label="List view">List View</button>
+            </div>
+        </div>
+        <div id="cards" class="grid-view">
+            <p>Loading directory...</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>Aspindale Chamber of Commerce</h3>
+                <p>21747</p>
+                <p>Aspindale, Zimbabwe</p>
+                <p>info@aspindalechamber.org</p>
+                <p>(+263) 77 805 4313</p>
+            </div>
+            <div class="social-icons">
+                <a href="#" target="_blank" aria-label="X (Twitter)">
+                    <img src="images/twitter.svg" alt="X" width="32" height="32">
+                </a>
+                <a href="#" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+                </a>
+                <a href="#" target="_blank" aria-label="Instagram">
+                    <img src="images/instagram.svg" alt="Instagram" width="32" height="32">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentyear"></span> Aspindale Chamber of Commerce</p>
+            <p>Enias Gramu | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
