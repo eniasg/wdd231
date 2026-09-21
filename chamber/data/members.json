@@ -1,1 +1,60 @@
-
+{
+    "members": [
+        {
+            "name": "IDWEB",
+            "address": "2115 Njiva Avenue, Aspindale, Harare",
+            "phone": "+263 77 805 4313",
+            "website": "https://idahowebsites.co.zw/",
+            "image": "idweb-logo.svg",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Surge Web Design",
+            "address": "4072 Rovambira Drive, Aspindale, Harare",
+            "phone": "+263 77 805 4313",
+            "website": "https://www.surgewebdesign.co.zw/",
+            "image": "surge-logo.svg",
+            "membershipLevel": 2
+        },
+        {
+            "name": "Graphic Zen",
+            "address": "1788 E Summerplace Court, Aspindale, Harare",
+            "phone": "+263 77 805 4313",
+            "website": "https://graphiczen.co.zw/",
+            "image": "graphiczen-logo.svg",
+            "membershipLevel": 2
+        },
+        {
+            "name": "Peppershock Media",
+            "address": "1215 First Street, Aspindale, Harare",
+            "phone": "+263 77 805 4313",
+            "website": "https://www.peppershock.co.zw/",
+            "image": "peppershock-logo.svg",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Flash Tech Services",
+            "address": "Star, Aspindale, Harare",
+            "phone": "+263 77 805 4313",
+            "website": "https://flashtechnicalservices.co.zw/",
+            "image": "flashtech-logo.svg",
+            "membershipLevel": 1
+        },
+        {
+            "name": "Metro Express Car Wash",
+            "address": "1725 Mukonono Road, Aspindale, Harare",
+            "phone": "+263 77 805 4313",
+            "website": "https://metroexpresscarwash.co.zw/",
+            "image": "metroexpress-logo.svg",
+            "membershipLevel": 1
+        },
+        {
+            "name": "Roaring Services",
+            "address": "5 Hove Street, Aspindale, Harare",
+            "phone": "+263 77 805 4313",
+            "website": "https://roaringservices.co.zw/",
+            "image": "roaring-logo.svg",
+            "membershipLevel": 2
+        }
+    ]
+}
