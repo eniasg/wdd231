@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+    <rect width="200" height="200" fill="#1B1B1B" rx="20"/>
+    <path d="M100,40 Q120,40 125,70 Q130,100 110,130 Q100,145 100,145 Q100,145 90,130 Q70,100 75,70 Q80,40 100,40Z" fill="#E74C3C"/>
+    <text x="100" y="175" font-family="Arial" font-size="14" font-weight="bold" fill="#E74C3C" text-anchor="middle">PEPPERSHOCK</text>
+</svg>

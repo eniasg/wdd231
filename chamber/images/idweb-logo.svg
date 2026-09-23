@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+    <rect width="200" height="200" fill="#2C3E50" rx="20"/>
+    <circle cx="100" cy="85" r="35" fill="none" stroke="#3498DB" stroke-width="4"/>
+    <text x="100" y="150" font-family="Arial" font-size="22" font-weight="bold" fill="#3498DB" text-anchor="middle">IDWEB</text>
+</svg>

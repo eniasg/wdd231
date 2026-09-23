@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+    <rect width="200" height="200" fill="#5D2E0C" rx="20"/>
+    <circle cx="100" cy="90" r="40" fill="#E67E22"/>
+    <circle cx="100" cy="90" r="48" fill="none" stroke="#D35400" stroke-width="6" stroke-dasharray="15 10"/>
+    <text x="100" y="160" font-family="Arial" font-size="20" font-weight="bold" fill="#E67E22" text-anchor="middle">ROARING</text>
+</svg>

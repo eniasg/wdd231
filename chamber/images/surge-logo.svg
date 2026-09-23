@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+    <rect width="200" height="200" fill="#1A1A2E" rx="20"/>
+    <polygon points="110,30 80,110 100,110 85,180 130,95 108,95 125,30" fill="#FF6B35"/>
+    <text x="100" y="155" font-family="Arial" font-size="20" font-weight="bold" fill="white" text-anchor="middle">SURGE</text>
+</svg>
