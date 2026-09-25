@@ -1,1 +1,162 @@
+/* modules.css - Styling for the ES Modules activity */
 
+:root {
+    --primary-color: #005151;
+    --secondary-color: #FF6B35;
+    --background-color: #F8F9FA;
+    --text-color: #333333;
+    --card-bg: #FFFFFF;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 2rem 1rem;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+h1 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Enrollment Controls */
+.enrollment-controls {
+    background-color: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.enrollment-controls label {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.enrollment-controls select {
+    padding: 0.5rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+}
+
+.enrollment-controls select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.enrollment-controls button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    transition: background-color 0.3s ease;
+}
+
+.enrollment-controls button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Sections List */
+.sections-container {
+    background-color: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+#sections-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.section-card {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section-card h3 {
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-card p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin: 0.25rem 0;
+}
+
+.section-card .enrollment {
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+}
+
+/* Medium screens and up */
+@media screen and (min-width: 640px) {
+    #sections-list {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .enrollment-controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .enrollment-controls label {
+        grid-column: 1 / -1;
+    }
+
+    .enrollment-controls select {
+        grid-column: 1 / 2;
+    }
+
+    .enrollment-controls button {
+        grid-column: auto;
+    }
+}
