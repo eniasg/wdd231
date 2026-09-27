@@ -7,7 +7,7 @@
     --text-color: #333333;
     --card-bg: #FFFFFF;
     --gold: #C5A028;
-    --silver: #808080;
+    --silver: #555555;
     --member: #2E7D32;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     --font-heading: 'Montserrat', sans-serif;
@@ -229,12 +229,13 @@ main {
 /* Badges */
 .badge {
     display: inline-block;
-    padding: 0.2rem 0.6rem;
+    padding: 0.25rem 0.75rem;
     border-radius: 20px;
-    font-size: 0.7rem;
-    font-weight: 600;
+    font-size: 0.75rem;
+    font-weight: 700;
     font-family: var(--font-heading);
     color: white;
+    margin-top: 0.5rem;
 }
 
 .badge.gold {
@@ -627,23 +628,4 @@ footer {
 
 .spotlight-card .website:hover {
     text-decoration: underline;
-}
-
-.badge {
-    display: inline-block;
-    padding: 0.2rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    font-family: var(--font-heading);
-    color: white;
-    margin-top: 0.5rem;
-}
-
-.badge.gold {
-    background-color: #C5A028;
-}
-
-.badge.silver {
-    background-color: #555;
 }
