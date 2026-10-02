@@ -1,0 +1,289 @@
+/* ============================================
+   site-plan-small.css
+   Base (mobile-first) styles for the site plan
+   ============================================ */
+
+:root {
+    /* Colors */
+    --primary-dark: #1B5E20;
+    --primary-medium: #2E7D32;
+    --primary-light: #4CAF50;
+    --secondary: #FF8F00;
+    --background: #F5F5F0;
+    --text-dark: #2C2C2C;
+    --text-light: #FFFFFF;
+    --card-bg: #FFFFFF;
+
+    /* Typography */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    /* Spacing + Effects */
+    --radius: 12px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--background);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Nav */
+nav {
+    background-color: var(--primary-medium);
+    padding: 0.75rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    color: var(--text-light);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--secondary);
+    color: var(--text-light);
+    outline: none;
+}
+
+/* Main */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+section {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 1.75rem;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-dark);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--secondary);
+    padding-left: 0.75rem;
+}
+
+h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-medium);
+    font-size: 1.05rem;
+    margin: 1.25rem 0 0.5rem;
+}
+
+p {
+    margin-bottom: 0.75rem;
+}
+
+ul,
+ol {
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+code {
+    background-color: var(--background);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Color Swatches */
+.swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.swatch {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background-color: var(--card-bg);
+}
+
+.swatch-color {
+    height: 80px;
+}
+
+.swatch-label {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.swatch-label strong {
+    display: block;
+    color: var(--primary-dark);
+}
+
+.swatch-label code {
+    display: block;
+    font-size: 0.75rem;
+    color: #666;
+    background: none;
+    padding: 0;
+    margin: 0.2rem 0;
+}
+
+.swatch-label p {
+    font-size: 0.75rem;
+    color: #666;
+    margin: 0.25rem 0 0;
+}
+
+/* Colored strong text in usage summary */
+.color-dark-green {
+    color: var(--primary-dark);
+}
+
+.color-medium-green {
+    color: var(--primary-medium);
+}
+
+.color-amber {
+    color: var(--secondary);
+}
+
+.color-off-white {
+    color: #888;
+}
+
+.color-dark-gray {
+    color: var(--text-dark);
+}
+
+/* Typography Demo */
+.font-demo {
+    padding: 1rem;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+    background-color: var(--background);
+}
+
+.font-demo.heading-font {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.font-demo.body-font {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+/* Wireframes */
+.wireframes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.wireframe-card {
+    background-color: var(--background);
+    border: 1px solid #ddd;
+    border-radius: var(--radius);
+    padding: 1rem;
+}
+
+.wireframe-card h3 {
+    text-align: center;
+    margin-top: 0;
+    color: var(--primary-dark);
+}
+
+.wireframe-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* ============ FOOTER ============ */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
