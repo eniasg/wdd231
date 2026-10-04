@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Apply for membership with the Aspindale Chamber of Commerce. Choose from NP, Bronze, Silver, or Gold membership levels.">
+    <meta name="author" content="Enias Gramu">
+    <title>Join the Chamber - Aspindale Chamber of Commerce</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:title" content="Join the Aspindale Chamber of Commerce">
+    <meta property="og:description" content="Become a member and grow your business. Four membership levels available.">
+    <meta property="og:image" content="https://eniasg.github.io/wdd231/chamber/images/og-preview.jpg">
+    <meta property="og:url" content="https://eniasg.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aspindale Chamber of Commerce">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/chamber-date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/chamber-logo.svg" alt="Aspindale Chamber of Commerce logo" width="50" height="50">
+        <span>Aspindale Chamber</span>
+        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="current"><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="#">Events</a></li>
+        </ul>
+    </nav>
+
+    <main class="join-main">
+        <h1>Membership Application</h1>
+
+        <div class="join-layout">
+
+            <!-- ============================== -->
+            <!-- MEMBERSHIP FORM                -->
+            <!-- ============================== -->
+            <div class="form-container">
+                <form action="thankyou.html" method="get" id="membership-form">
+
+                    <label for="firstName">
+                        First Name
+                        <input type="text" id="firstName" name="firstName" title="Enter your first name"
+                            autocomplete="given-name" required>
+                    </label>
+
+                    <label for="lastName">
+                        Last Name
+                        <input type="text" id="lastName" name="lastName" title="Enter your last name"
+                            autocomplete="family-name" required>
+                    </label>
+
+                    <label for="orgTitle">
+                        Organizational Title
+                        <input type="text" id="orgTitle" name="orgTitle"
+                            title="Enter your title (minimum 7 characters: letters, spaces, hyphens only)"
+                            autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+
+                    <label for="email">
+                        Email Address
+                        <input type="email" id="email" name="email" title="Enter a valid email address"
+                            autocomplete="email" placeholder="example@business.com" required>
+                    </label>
+
+                    <label for="phone">
+                        Mobile Phone Number
+                        <input type="tel" id="phone" name="phone" title="Enter your mobile phone number"
+                            autocomplete="tel" required>
+                    </label>
+
+                    <label for="businessName">
+                        Business / Organization Name
+                        <input type="text" id="businessName" name="businessName"
+                            title="Enter your business or organization name" autocomplete="organization" required>
+                    </label>
+
+                    <label for="membershipLevel">
+                        Membership Level
+                        <select id="membershipLevel" name="membershipLevel" title="Select a membership level" required>
+                            <option value="" disabled selected>Select a level</option>
+                            <option value="np">NP Membership (Non-profit — No Fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label for="description">
+                        Business / Organization Description
+                        <textarea id="description" name="description" rows="4"
+                            title="Describe your business or organization"></textarea>
+                    </label>
+
+                    <!-- Hidden timestamp: filled by join.js -->
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <input type="submit" value="Submit Application" class="submit-btn">
+                </form>
+            </div>
+
+            <!-- ============================== -->
+            <!-- MEMBERSHIP CARDS               -->
+            <!-- ============================== -->
+            <section class="membership-cards">
+                <h2>Membership Levels</h2>
+
+                <div class="cards-grid">
+
+                    <div class="member-card np-card animate-in">
+                        <h3>NP Membership</h3>
+                        <p class="price">Free</p>
+                        <p class="description">For qualifying non-profit organizations.</p>
+                        <button class="modal-link" data-modal="modal-np" type="button">Learn More →</button>
+                    </div>
+
+                    <div class="member-card bronze-card animate-in">
+                        <h3>Bronze Membership</h3>
+                        <p class="price">$250 / year</p>
+                        <p class="description">Essential benefits for small businesses.</p>
+                        <button class="modal-link" data-modal="modal-bronze" type="button">Learn More →</button>
+                    </div>
+
+                    <div class="member-card silver-card animate-in">
+                        <h3>Silver Membership</h3>
+                        <p class="price">$500 / year</p>
+                        <p class="description">Enhanced visibility and networking.</p>
+                        <button class="modal-link" data-modal="modal-silver" type="button">Learn More →</button>
+                    </div>
+
+                    <div class="member-card gold-card animate-in">
+                        <h3>Gold Membership</h3>
+                        <p class="price">$1,000 / year</p>
+                        <p class="description">Premium benefits and sponsorship.</p>
+                        <button class="modal-link" data-modal="modal-gold" type="button">Learn More →</button>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ============================== -->
+    <!-- MODAL DIALOGS                  -->
+    <!-- ============================== -->
+
+    <dialog id="modal-np" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close dialog" type="button">&times;</button>
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>Listing in the online business directory</li>
+                <li>Access to member-only events</li>
+                <li>Monthly newsletter subscription</li>
+                <li>Networking opportunities</li>
+                <li>Chamber decal and certificate</li>
+            </ul>
+            <p><strong>Annual Fee: Free for qualified non-profits</strong></p>
+        </div>
+    </dialog>
+
+    <dialog id="modal-bronze" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close dialog" type="button">&times;</button>
+            <h2>Bronze Membership Benefits</h2>
+            <ul>
+                <li>All NP benefits included</li>
+                <li>Enhanced directory listing with logo</li>
+                <li>Discounted event registration (10% off)</li>
+                <li>Social media promotion (1 post per year)</li>
+                <li>Welcome feature in the newsletter</li>
+            </ul>
+            <p><strong>Annual Fee: $250</strong></p>
+        </div>
+    </dialog>
+
+    <dialog id="modal-silver" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close dialog" type="button">&times;</button>
+            <h2>Silver Membership Benefits</h2>
+            <ul>
+                <li>All Bronze benefits included</li>
+                <li>Home page spotlight (1 month per year)</li>
+                <li>Discounted event registration (20% off)</li>
+                <li>Social media promotion (3 posts per year)</li>
+                <li>Access to member-exclusive workshops</li>
+                <li>Priority booth placement at events</li>
+            </ul>
+            <p><strong>Annual Fee: $500</strong></p>
+        </div>
+    </dialog>
+
+    <dialog id="modal-gold" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close dialog" type="button">&times;</button>
+            <h2>Gold Membership Benefits</h2>
+            <ul>
+                <li>All Silver benefits included</li>
+                <li>Premium home page spotlight (3 months per year)</li>
+                <li>Free registration for all events</li>
+                <li>Monthly social media promotion</li>
+                <li>Sponsor recognition at the annual gala</li>
+                <li>Featured in chamber press releases</li>
+                <li>Board voting rights</li>
+            </ul>
+            <p><strong>Annual Fee: $1,000</strong></p>
+        </div>
+    </dialog>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>Aspindale Chamber of Commerce</h3>
+                <p>21747 First Street</p>
+                <p>Aspindale, Harare</p>
+                <p>info@aspindalechamber.org.zw</p>
+                <p>+263 77 805 4313</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://x.com/eniasg" target="_blank" aria-label="X (Twitter)">
+                    <img src="images/twitter.svg" alt="X" width="32" height="32">
+                </a>
+                <a href="https://linkedin.com/in/eniasgramu" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+                </a>
+                <a href="https://www.instagram.com/eniasgramu" target="_blank" aria-label="Instagram">
+                    <img src="images/instagram.svg" alt="Instagram" width="32" height="32">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentyear"></span> Aspindale Chamber of Commerce</p>
+            <p>Enias Gramu | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
