@@ -1,0 +1,170 @@
+/* large.css - Large screen styles (768px and up) */
+
+@media screen and (min-width: 768px) {
+
+    /* Header */
+    header {
+        grid-template-columns: 48px auto 1fr;
+        padding: 1rem 2rem;
+    }
+
+    header img {
+        width: 48px;
+    }
+
+    header span {
+        font-size: 1.25rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block !important;
+        background-color: var(--primary-color);
+    }
+
+    .navigation ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .navigation li {
+        border-bottom: none;
+    }
+
+    .navigation li a {
+        padding: 0.75rem 1.5rem;
+    }
+
+    /* Main */
+    main {
+        padding: 2rem;
+    }
+
+    /* Directory Header */
+    .directory-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Grid View */
+    .grid-view {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: left;
+    }
+
+    .footer-contact {
+        text-align: left;
+    }
+
+    .social-icons {
+        margin: 0;
+    }
+
+    .footer-bottom p {
+        display: inline-block;
+        margin: 0 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grid-view {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ============================================ */
+/* HOME PAGE - LARGE SCREEN                     */
+/* ============================================ */
+
+@media screen and (min-width: 768px) {
+
+    /* Hero */
+    .hero-overlay {
+        padding: 3rem 2rem 2rem;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1.2rem;
+    }
+
+    /* Events - 3 columns */
+    .events-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Weather - side by side */
+    .weather-container {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .current-weather {
+        flex: 1;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .forecast {
+        flex: 2;
+    }
+
+    /* Spotlights - 3 columns */
+    .spotlights-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .spotlight-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* ============================================ */
+/* JOIN PAGE — Large screen                     */
+/* ============================================ */
+
+@media screen and (min-width: 768px) {
+
+    /* Form and cards side-by-side */
+    .join-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .form-container {
+        flex: 2;
+    }
+
+    .membership-cards {
+        flex: 1;
+    }
+
+    /* Cards stack vertically on the right */
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
