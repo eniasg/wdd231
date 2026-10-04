@@ -142,3 +142,95 @@
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
     }
 }
+
+/* ============================================ */
+/* JOIN PAGE — Large screen                     */
+/* ============================================ */
+
+@media screen and (min-width: 768px) {
+
+    /* Form and cards side-by-side */
+    .join-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .form-container {
+        flex: 2;
+    }
+
+    .membership-cards {
+        flex: 1;
+    }
+
+    /* Cards stack vertically on the right */
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================ */
+/* DISCOVER PAGE — LARGE SCREEN (1025px+)       */
+/* ============================================ */
+
+@media screen and (min-width: 1025px) {
+
+    /* 4-column varied layout using named grid areas */
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        grid-template-areas:
+            "a a b c"
+            "d e f f"
+            "g h h h";
+    }
+
+    .discover-card[data-id="1"] {
+        grid-area: a;
+    }
+
+    .discover-card[data-id="2"] {
+        grid-area: b;
+    }
+
+    .discover-card[data-id="3"] {
+        grid-area: c;
+    }
+
+    .discover-card[data-id="4"] {
+        grid-area: d;
+    }
+
+    .discover-card[data-id="5"] {
+        grid-area: e;
+    }
+
+    .discover-card[data-id="6"] {
+        grid-area: f;
+    }
+
+    .discover-card[data-id="7"] {
+        grid-area: g;
+    }
+
+    .discover-card[data-id="8"] {
+        grid-area: h;
+    }
+
+    /* Image hover effect — kept from medium but enhanced */
+    .card-figure img:hover {
+        transform: scale(1.08);
+        filter: brightness(1.1) contrast(1.15) saturate(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Card hover polish */
+    .discover-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .discover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+}

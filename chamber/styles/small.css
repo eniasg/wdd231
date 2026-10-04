@@ -629,3 +629,442 @@ footer {
 .spotlight-card .website:hover {
     text-decoration: underline;
 }
+
+/* ============================================ */
+/* JOIN PAGE — FORM + CARDS (mobile first)      */
+/* ============================================ */
+
+.join-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+}
+
+.join-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* --- Form --- */
+.form-container {
+    background-color: var(--card-bg);
+    padding: var(--space-lg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.form-container label {
+    display: block;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    margin-top: 0.3rem;
+    padding: 0.7rem;
+    border: 2px solid #ddd;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.form-container input:invalid:not(:placeholder-shown),
+.form-container select:invalid:not(:placeholder-shown) {
+    border-color: #C62828;
+}
+
+.submit-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+    background-color: #8F3800;
+    transform: scale(1.02);
+}
+
+/* --- Membership Cards --- */
+.membership-cards h2 {
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 0.75rem;
+    margin-bottom: var(--space-md);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+.member-card {
+    background-color: var(--card-bg);
+    padding: var(--space-lg) var(--space-md);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    /* Entrance animation — opacity starts at 0 */
+    opacity: 0;
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+.member-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: var(--space-sm);
+    color: var(--primary-color);
+}
+
+.member-card .price {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: var(--space-sm);
+}
+
+.member-card .description {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-md);
+}
+
+.member-card .modal-link {
+    background: none;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1.25rem;
+    border-radius: 25px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.member-card .modal-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Colored top border per level */
+.np-card {
+    border-top: 4px solid #2E7D32;
+}
+
+.bronze-card {
+    border-top: 4px solid #CD7F32;
+}
+
+.silver-card {
+    border-top: 4px solid #808080;
+}
+
+.gold-card {
+    border-top: 4px solid #C5A028;
+}
+
+/* Card entrance keyframes */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Modal dialogs --- */
+.modal {
+    border: none;
+    border-radius: var(--radius);
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    padding: 2rem 1.5rem 1.5rem;
+    position: relative;
+}
+
+.modal-content h2 {
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+}
+
+.modal-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: var(--space-md);
+}
+
+.modal-content ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+.modal-content ul li::before {
+    content: "✓ ";
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-right: 0.4rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #999;
+    padding: 0.25rem 0.5rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-close:hover {
+    color: var(--secondary-color);
+    transform: scale(1.15);
+}
+
+/* --- Thank You page --- */
+.thankyou-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem var(--space-md);
+}
+
+.thankyou-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.thankyou-card h1 {
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+    border-bottom: none;
+    display: block;
+}
+
+.thankyou-card h2 {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-md);
+}
+
+.summary {
+    background-color: var(--background-color);
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--secondary-color);
+    text-align: left;
+    margin-bottom: var(--space-lg);
+}
+
+.summary p {
+    margin: 0.4rem 0;
+    padding: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+.summary strong {
+    color: var(--primary-color);
+    display: inline-block;
+    min-width: 160px;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: var(--space-md);
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Reduced motion accessibility --- */
+@media (prefers-reduced-motion: reduce) {
+    .member-card {
+        animation: none;
+        opacity: 1;
+    }
+}
+
+/* ============================================ */
+/* DISCOVER PAGE — MOBILE (base)                */
+/* ============================================ */
+
+.discover-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+}
+
+/* Visit message */
+.visit-message {
+    margin-bottom: var(--space-lg);
+}
+
+.visit-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    color: white;
+    position: relative;
+}
+
+.visit-info span {
+    font-size: 1.5rem;
+}
+
+.visit-info p {
+    flex: 1;
+    margin: 0;
+    font-weight: 600;
+}
+
+.close-message {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.close-message:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.first-visit {
+    background-color: #2E7D32;
+}
+
+.recent-visit {
+    background-color: var(--secondary-color);
+}
+
+.days-visit {
+    background-color: var(--primary-color);
+}
+
+/* Cards grid — SMALL screen (single column) */
+.discover-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+/* Individual card */
+.discover-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: var(--space-md);
+    overflow: hidden;
+}
+
+.discover-card h2 {
+    font-size: 1.15rem;
+    margin-bottom: var(--space-sm);
+    color: var(--primary-color);
+    border-left: 3px solid var(--secondary-color);
+    padding-left: 0.6rem;
+}
+
+.card-figure {
+    margin: 0 0 var(--space-sm);
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+}
+
+.card-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-address {
+    font-style: normal;
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #ddd;
+    margin-bottom: var(--space-sm);
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: var(--space-md);
+    line-height: 1.5;
+}
+
+.learn-more-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.25rem;
+    border-radius: 25px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.learn-more-btn:hover {
+    background-color: #8F3800;
+    transform: scale(1.02);
+}

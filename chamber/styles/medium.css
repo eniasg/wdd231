@@ -1,0 +1,62 @@
+/* medium.css - Medium screen layout (641px – 1024px) */
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+
+    /* 3-column staggered layout using named grid areas */
+    .discover-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        grid-template-areas:
+            "a b c"
+            "d e f"
+            "g h h";
+    }
+
+    /* Assign each card to a named area */
+    .discover-card[data-id="1"] {
+        grid-area: a;
+    }
+
+    .discover-card[data-id="2"] {
+        grid-area: b;
+    }
+
+    .discover-card[data-id="3"] {
+        grid-area: c;
+    }
+
+    .discover-card[data-id="4"] {
+        grid-area: d;
+    }
+
+    .discover-card[data-id="5"] {
+        grid-area: e;
+    }
+
+    .discover-card[data-id="6"] {
+        grid-area: f;
+    }
+
+    .discover-card[data-id="7"] {
+        grid-area: g;
+    }
+
+    .discover-card[data-id="8"] {
+        grid-area: h;
+    }
+
+    /* Image hover effect (disabled on mobile) */
+    .card-figure img {
+        transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card-figure img:hover {
+        transform: scale(1.06);
+        filter: brightness(1.08) contrast(1.1);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .learn-more-btn {
+        width: auto;
+    }
+}
