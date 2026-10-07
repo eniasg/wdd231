@@ -1,18 +1,113 @@
-/* medium.css - Medium screen layout (641px – 1024px) */
+/* medium.css - Tablet layout (641px – 1024px) */
 
 @media screen and (min-width: 641px) and (max-width: 1024px) {
 
-    /* 3-column staggered layout using named grid areas */
+    /* ============================================ */
+    /* HEADER (still hamburger on tablet)           */
+    /* ============================================ */
+    header {
+        grid-template-columns: 44px auto 44px;
+        padding: 1rem 1.5rem;
+    }
+
+    header img {
+        width: 44px;
+    }
+
+    header span {
+        font-size: 1.15rem;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navigation.show {
+        display: block;
+    }
+
+    /* ============================================ */
+    /* MAIN                                         */
+    /* ============================================ */
+    main {
+        padding: 2rem 1.5rem;
+    }
+
+    /* ============================================ */
+    /* DIRECTORY — 2-column grid                    */
+    /* ============================================ */
+    .grid-view {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .directory-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* ============================================ */
+    /* HOME PAGE                                    */
+    /* ============================================ */
+    .hero-overlay {
+        padding: 3.5rem 2rem 2rem;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1.05rem;
+    }
+
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .spotlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    /* ============================================ */
+    /* JOIN PAGE — form and cards side-by-side      */
+    /* ============================================ */
+    .join-layout {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .form-container {
+        flex: 2;
+    }
+
+    .membership-cards {
+        flex: 1;
+    }
+
+    /* ============================================ */
+    /* DISCOVER PAGE — named grid areas for tablet  */
+    /* ============================================ */
     .discover-grid {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1.25rem;
+        /* 3-column staggered layout */
         grid-template-areas:
             "a b c"
             "d e f"
             "g h h";
     }
 
-    /* Assign each card to a named area */
+    /* Assign each card to a named grid area */
     .discover-card[data-id="1"] {
         grid-area: a;
     }
@@ -45,7 +140,7 @@
         grid-area: h;
     }
 
-    /* Image hover effect (disabled on mobile) */
+    /* Card image hover effect (tablet only) */
     .card-figure img {
         transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
     }

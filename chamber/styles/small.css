@@ -1,15 +1,35 @@
 /* small.css - Mobile-first styles */
 
 :root {
+    /* ===== Colors ===== */
     --primary-color: #005151;
     --secondary-color: #B34700;
+    /* darker orange — text-safe on white */
+    --accent-color: #FF6B35;
+    /* bright orange — backgrounds/borders only */
     --background-color: #F8F9FA;
-    --text-color: #333333;
+    --text-color: #2C2C2C;
+    --text-muted: #555555;
     --card-bg: #FFFFFF;
-    --gold: #C5A028;
-    --silver: #555555;
-    --member: #2E7D32;
+
+    /* Badge colors (dark text on light backgrounds) */
+    --gold-bg: #F4D03F;
+    --gold-text: #4A3600;
+    --silver-bg: #D0D0D0;
+    --silver-text: #2C2C2C;
+    --member-bg: #2E7D32;
+
+    /* ===== Spacing ===== */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+
+    /* ===== Effects ===== */
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+    --radius-sm: 8px;
+
+    /* ===== Typography ===== */
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
 }
@@ -39,11 +59,14 @@ h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--accent-color);
     display: inline-block;
 }
 
-/* Header */
+/* ============================================ */
+/* HEADER + NAV                                 */
+/* ============================================ */
+
 header {
     display: grid;
     grid-template-columns: 40px auto 44px;
@@ -126,24 +149,30 @@ header span {
     font-weight: 700;
 }
 
-/* Main */
+/* ============================================ */
+/* MAIN                                         */
+/* ============================================ */
+
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.5rem;
+    padding: var(--space-lg);
 }
 
-/* Directory Header */
+/* ============================================ */
+/* DIRECTORY PAGE                               */
+/* ============================================ */
+
 .directory-header {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--space-md);
     margin-bottom: 2rem;
 }
 
 .view-buttons {
     display: flex;
-    gap: 1rem;
+    gap: var(--space-md);
     justify-content: center;
 }
 
@@ -156,7 +185,7 @@ main {
     font-weight: 600;
     color: var(--primary-color);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     min-height: 44px;
 }
 
@@ -166,23 +195,23 @@ main {
     color: white;
 }
 
-/* Grid View */
+/* Grid view */
 .grid-view {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: var(--space-md);
 }
 
 .card {
     background-color: var(--card-bg);
-    border-radius: 12px;
+    border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem 1rem;
+    padding: var(--space-lg) var(--space-md);
     text-align: center;
 }
 
@@ -194,7 +223,7 @@ main {
 .card img {
     max-width: 80px;
     height: auto;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-md);
 }
 
 .card-content h3 {
@@ -204,7 +233,7 @@ main {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: var(--space-sm);
 }
 
 .card-content p {
@@ -226,7 +255,10 @@ main {
     text-decoration: underline;
 }
 
-/* Badges */
+/* ============================================ */
+/* BADGES — single source of truth              */
+/* ============================================ */
+
 .badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
@@ -234,28 +266,33 @@ main {
     font-size: 0.75rem;
     font-weight: 700;
     font-family: var(--font-heading);
-    color: white;
-    margin-top: 0.5rem;
+    margin-top: var(--space-sm);
 }
 
 .badge.gold {
-    background-color: var(--gold);
+    background-color: var(--gold-bg);
+    color: var(--gold-text);
 }
 
 .badge.silver {
-    background-color: var(--silver);
+    background-color: var(--silver-bg);
+    color: var(--silver-text);
 }
 
 .badge.member {
-    background-color: var(--member);
+    background-color: var(--member-bg);
+    color: #FFFFFF;
 }
 
-/* List View */
+/* ============================================ */
+/* LIST VIEW                                    */
+/* ============================================ */
+
 .list-view .directory-table {
     width: 100%;
     border-collapse: collapse;
     background-color: var(--card-bg);
-    border-radius: 12px;
+    border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
 }
@@ -263,13 +300,13 @@ main {
 .list-view .directory-table th {
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem;
+    padding: var(--space-md);
     text-align: left;
     font-family: var(--font-heading);
 }
 
 .list-view .directory-table td {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem var(--space-md);
     border-bottom: 1px solid #eee;
     vertical-align: top;
 }
@@ -299,14 +336,14 @@ main {
     }
 
     .list-view .directory-table tr {
-        margin-bottom: 1rem;
+        margin-bottom: var(--space-md);
         border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 0.5rem;
+        border-radius: var(--radius-sm);
+        padding: var(--space-sm);
     }
 
     .list-view .directory-table td {
-        padding: 0.5rem;
+        padding: var(--space-sm);
         border-bottom: none;
         position: relative;
         padding-left: 45%;
@@ -315,14 +352,17 @@ main {
     .list-view .directory-table td:before {
         content: attr(data-label);
         position: absolute;
-        left: 0.5rem;
+        left: var(--space-sm);
         width: 40%;
         font-weight: bold;
         color: var(--primary-color);
     }
 }
 
-/* Footer */
+/* ============================================ */
+/* FOOTER                                       */
+/* ============================================ */
+
 footer {
     background-color: var(--primary-color);
     color: white;
@@ -330,13 +370,13 @@ footer {
 }
 
 .footer-content {
-    padding: 2rem 1rem 1rem;
+    padding: 2rem 1rem var(--space-md);
     text-align: center;
 }
 
 .footer-contact h3 {
     color: white;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-sm);
 }
 
 .footer-contact p {
@@ -347,8 +387,8 @@ footer {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin: 1.5rem 0;
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
 }
 
 .social-icons a {
@@ -367,7 +407,7 @@ footer {
 
 .footer-bottom {
     background-color: rgba(0, 0, 0, 0.2);
-    padding: 1rem;
+    padding: var(--space-md);
     font-size: 0.75rem;
     text-align: center;
 }
@@ -383,14 +423,13 @@ footer {
 }
 
 /* ============================================ */
-/* HOME PAGE STYLES - W03                       */
+/* HOME PAGE                                    */
 /* ============================================ */
 
-/* HERO SECTION */
 .hero {
     position: relative;
     margin-bottom: 2rem;
-    border-radius: 12px;
+    border-radius: var(--radius);
     overflow: hidden;
 }
 
@@ -406,9 +445,13 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.85) 40%,
+            rgba(0, 0, 0, 0.55) 70%,
+            transparent 100%);
     color: white;
-    padding: 2rem 1rem 1.5rem;
+    padding: 3rem 1rem var(--space-lg);
     text-align: center;
 }
 
@@ -416,21 +459,23 @@ footer {
     font-family: var(--font-heading);
     color: white;
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-sm);
     border-bottom: none;
     display: block;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
 .hero-overlay p {
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-md);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
 .cta-button {
     display: inline-block;
     background-color: var(--secondary-color);
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem var(--space-lg);
     border-radius: 30px;
     font-weight: 700;
     font-family: var(--font-heading);
@@ -443,34 +488,36 @@ footer {
     transform: scale(1.03);
 }
 
-/* EVENTS SECTION */
+/* Events */
 .events {
     margin-bottom: 2rem;
 }
 
-.events h2 {
-    border-left: 4px solid var(--secondary-color);
+.events h2,
+.weather h2,
+.spotlights h2 {
+    border-left: 4px solid var(--accent-color);
     padding-left: 0.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-md);
 }
 
 .events-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: var(--space-md);
 }
 
 .event-card {
     background-color: var(--card-bg);
-    padding: 1rem;
-    border-radius: 8px;
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
     box-shadow: var(--shadow);
-    border-left: 4px solid var(--secondary-color);
+    border-left: 4px solid var(--accent-color);
 }
 
 .event-card h3 {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-sm);
     color: var(--primary-color);
 }
 
@@ -478,44 +525,38 @@ footer {
     color: var(--secondary-color);
     font-weight: 600;
     font-size: 0.85rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-sm);
 }
 
 .event-location {
     font-size: 0.85rem;
-    color: #555;
-    margin-top: 0.5rem;
+    color: var(--text-muted);
+    margin-top: var(--space-sm);
 }
 
-/* WEATHER SECTION */
+/* Weather */
 .weather {
     background-color: var(--card-bg);
     padding: 1.25rem;
-    border-radius: 12px;
+    border-radius: var(--radius);
     box-shadow: var(--shadow);
     margin-bottom: 2rem;
-}
-
-.weather h2 {
-    border-left: 4px solid var(--secondary-color);
-    padding-left: 0.75rem;
-    margin-bottom: 1rem;
 }
 
 .weather-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--space-md);
 }
 
 .current-weather {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: var(--space-md);
     background-color: var(--background-color);
-    border-radius: 8px;
-    padding: 1rem;
+    border-radius: var(--radius-sm);
+    padding: var(--space-md);
 }
 
 .current-weather img {
@@ -532,7 +573,7 @@ footer {
 
 .condition {
     text-transform: capitalize;
-    color: #555;
+    color: var(--text-muted);
 }
 
 .forecast h3 {
@@ -544,13 +585,13 @@ footer {
 .forecast-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
+    gap: var(--space-sm);
 }
 
 .forecast-card {
     background-color: var(--background-color);
-    padding: 0.75rem 0.5rem;
-    border-radius: 8px;
+    padding: 0.75rem var(--space-sm);
+    border-radius: var(--radius-sm);
     text-align: center;
 }
 
@@ -568,30 +609,24 @@ footer {
 .forecast-desc {
     font-size: 0.7rem;
     text-transform: capitalize;
-    color: #555;
+    color: var(--text-muted);
 }
 
-/* SPOTLIGHTS SECTION */
+/* Spotlights */
 .spotlights {
     margin-bottom: 2rem;
-}
-
-.spotlights h2 {
-    border-left: 4px solid var(--secondary-color);
-    padding-left: 0.75rem;
-    margin-bottom: 1rem;
 }
 
 .spotlights-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: var(--space-md);
 }
 
 .spotlight-card {
     background-color: var(--card-bg);
-    padding: 1.5rem 1rem;
-    border-radius: 12px;
+    padding: var(--space-lg) var(--space-md);
+    border-radius: var(--radius);
     box-shadow: var(--shadow);
     text-align: center;
     transition: transform 0.3s ease;
@@ -609,7 +644,7 @@ footer {
 
 .spotlight-card h3 {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-sm);
     color: var(--primary-color);
 }
 
@@ -622,7 +657,7 @@ footer {
     display: inline-block;
     color: var(--primary-color);
     font-weight: 600;
-    margin: 0.5rem 0;
+    margin: var(--space-sm) 0;
     text-decoration: none;
 }
 
@@ -631,7 +666,7 @@ footer {
 }
 
 /* ============================================ */
-/* JOIN PAGE — FORM + CARDS (mobile first)      */
+/* JOIN PAGE                                    */
 /* ============================================ */
 
 .join-main {
@@ -646,7 +681,6 @@ footer {
     gap: 2rem;
 }
 
-/* --- Form --- */
 .form-container {
     background-color: var(--card-bg);
     padding: var(--space-lg);
@@ -696,14 +730,14 @@ footer {
     background-color: var(--secondary-color);
     color: white;
     border: none;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem var(--space-lg);
     border-radius: 30px;
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 0.5rem;
+    margin-top: var(--space-sm);
 }
 
 .submit-btn:hover {
@@ -711,9 +745,9 @@ footer {
     transform: scale(1.02);
 }
 
-/* --- Membership Cards --- */
+/* Membership Cards */
 .membership-cards h2 {
-    border-left: 4px solid var(--secondary-color);
+    border-left: 4px solid var(--accent-color);
     padding-left: 0.75rem;
     margin-bottom: var(--space-md);
 }
@@ -730,7 +764,6 @@ footer {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     text-align: center;
-    /* Entrance animation — opacity starts at 0 */
     opacity: 0;
     animation: slideUp 0.6s ease-out forwards;
 }
@@ -759,7 +792,7 @@ footer {
     background: none;
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
-    padding: 0.5rem 1.25rem;
+    padding: var(--space-sm) 1.25rem;
     border-radius: 25px;
     font-family: var(--font-heading);
     font-weight: 600;
@@ -772,7 +805,7 @@ footer {
     color: white;
 }
 
-/* Colored top border per level */
+/* Top border per level */
 .np-card {
     border-top: 4px solid #2E7D32;
 }
@@ -789,7 +822,6 @@ footer {
     border-top: 4px solid #C5A028;
 }
 
-/* Card entrance keyframes */
 @keyframes slideUp {
     0% {
         opacity: 0;
@@ -802,7 +834,7 @@ footer {
     }
 }
 
-/* --- Modal dialogs --- */
+/* Modals */
 .modal {
     border: none;
     border-radius: var(--radius);
@@ -820,7 +852,7 @@ footer {
 }
 
 .modal-content {
-    padding: 2rem 1.5rem 1.5rem;
+    padding: 2rem var(--space-lg) var(--space-lg);
     position: relative;
 }
 
@@ -836,7 +868,7 @@ footer {
 }
 
 .modal-content ul li {
-    padding: 0.5rem 0;
+    padding: var(--space-sm) 0;
     border-bottom: 1px solid #eee;
     font-size: 0.95rem;
 }
@@ -850,15 +882,16 @@ footer {
 
 .modal-close {
     position: absolute;
-    top: 0.5rem;
+    top: var(--space-sm);
     right: 0.75rem;
     background: none;
     border: none;
     font-size: 1.75rem;
     line-height: 1;
     cursor: pointer;
-    color: #999;
-    padding: 0.25rem 0.5rem;
+    color: var(--text-muted);
+    /* changed from #999 — now 7.4:1 */
+    padding: 0.25rem var(--space-sm);
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -867,7 +900,7 @@ footer {
     transform: scale(1.15);
 }
 
-/* --- Thank You page --- */
+/* Thank-you page */
 .thankyou-main {
     max-width: 800px;
     margin: 0 auto;
@@ -898,7 +931,7 @@ footer {
     background-color: var(--background-color);
     padding: var(--space-md);
     border-radius: var(--radius-sm);
-    border-left: 4px solid var(--secondary-color);
+    border-left: 4px solid var(--accent-color);
     text-align: left;
     margin-bottom: var(--space-lg);
 }
@@ -927,7 +960,7 @@ footer {
     text-decoration: underline;
 }
 
-/* --- Reduced motion accessibility --- */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     .member-card {
         animation: none;
@@ -936,7 +969,7 @@ footer {
 }
 
 /* ============================================ */
-/* DISCOVER PAGE — MOBILE (base)                */
+/* DISCOVER PAGE                                */
 /* ============================================ */
 
 .discover-main {
@@ -945,7 +978,6 @@ footer {
     padding: var(--space-lg);
 }
 
-/* Visit message */
 .visit-message {
     margin-bottom: var(--space-lg);
 }
@@ -954,7 +986,7 @@ footer {
     display: flex;
     align-items: center;
     gap: var(--space-md);
-    padding: 1rem;
+    padding: var(--space-md);
     border-radius: var(--radius-sm);
     color: white;
     position: relative;
@@ -976,7 +1008,7 @@ footer {
     color: white;
     font-size: 1.25rem;
     cursor: pointer;
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem var(--space-sm);
     opacity: 0.85;
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
@@ -998,14 +1030,13 @@ footer {
     background-color: var(--primary-color);
 }
 
-/* Cards grid — SMALL screen (single column) */
+/* Discover grid — small screen */
 .discover-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-md);
 }
 
-/* Individual card */
 .discover-card {
     background-color: var(--card-bg);
     border-radius: var(--radius);
@@ -1018,7 +1049,7 @@ footer {
     font-size: 1.15rem;
     margin-bottom: var(--space-sm);
     color: var(--primary-color);
-    border-left: 3px solid var(--secondary-color);
+    border-left: 3px solid var(--accent-color);
     padding-left: 0.6rem;
 }
 

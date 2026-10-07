@@ -1,8 +1,10 @@
-/* large.css - Large screen styles (768px and up) */
+/* large.css - Desktop layout (1025px and above) */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1025px) {
 
-    /* Header */
+    /* ============================================ */
+    /* HEADER — horizontal navigation               */
+    /* ============================================ */
     header {
         grid-template-columns: 48px auto 1fr;
         padding: 1rem 2rem;
@@ -22,7 +24,6 @@
 
     .navigation {
         display: block !important;
-        background-color: var(--primary-color);
     }
 
     .navigation ul {
@@ -41,81 +42,46 @@
         padding: 0.75rem 1.5rem;
     }
 
-    /* Main */
+    /* ============================================ */
+    /* MAIN                                         */
+    /* ============================================ */
     main {
         padding: 2rem;
     }
 
-    /* Directory Header */
-    .directory-header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+    h1 {
+        font-size: 2.5rem;
     }
 
-    /* Grid View */
+    /* ============================================ */
+    /* DIRECTORY — 3-column grid                    */
+    /* ============================================ */
     .grid-view {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
     }
 
-    /* Footer */
-    .footer-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem;
-        text-align: left;
-    }
-
-    .footer-contact {
-        text-align: left;
-    }
-
-    .social-icons {
-        margin: 0;
-    }
-
-    .footer-bottom p {
-        display: inline-block;
-        margin: 0 1rem;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .grid-view {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* ============================================ */
-/* HOME PAGE - LARGE SCREEN                     */
-/* ============================================ */
-
-@media screen and (min-width: 768px) {
-
-    /* Hero */
+    /* ============================================ */
+    /* HOME PAGE                                    */
+    /* ============================================ */
     .hero-overlay {
-        padding: 3rem 2rem 2rem;
+        padding: 4rem 3rem 2.5rem;
     }
 
     .hero-overlay h1 {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
     }
 
     .hero-overlay p {
         font-size: 1.2rem;
     }
 
-    /* Events - 3 columns */
     .events-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
     }
 
-    /* Weather - side by side */
+    /* Weather — side-by-side */
     .weather-container {
         flex-direction: row;
         align-items: stretch;
@@ -131,7 +97,6 @@
         flex: 2;
     }
 
-    /* Spotlights - 3 columns */
     .spotlights-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
@@ -139,46 +104,25 @@
 
     .spotlight-card:hover {
         transform: translateY(-6px);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     }
-}
 
-/* ============================================ */
-/* JOIN PAGE — Large screen                     */
-/* ============================================ */
-
-@media screen and (min-width: 768px) {
-
-    /* Form and cards side-by-side */
+    /* ============================================ */
+    /* JOIN PAGE — keep form/cards side-by-side     */
+    /* ============================================ */
     .join-layout {
         flex-direction: row;
-        align-items: flex-start;
+        gap: 2rem;
     }
 
-    .form-container {
-        flex: 2;
-    }
-
-    .membership-cards {
-        flex: 1;
-    }
-
-    /* Cards stack vertically on the right */
-    .cards-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ============================================ */
-/* DISCOVER PAGE — LARGE SCREEN (1025px+)       */
-/* ============================================ */
-
-@media screen and (min-width: 1025px) {
-
-    /* 4-column varied layout using named grid areas */
+    /* ============================================ */
+    /* DISCOVER PAGE — named grid areas (desktop)   */
+    /* ============================================ */
     .discover-grid {
+        display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
+        /* 4-column varied layout — different from medium */
         grid-template-areas:
             "a a b c"
             "d e f f"
@@ -217,20 +161,45 @@
         grid-area: h;
     }
 
-    /* Image hover effect — kept from medium but enhanced */
+    /* Card image hover effect (desktop enhanced) */
     .card-figure img:hover {
         transform: scale(1.08);
         filter: brightness(1.1) contrast(1.15) saturate(1.05);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
-    /* Card hover polish */
+    .discover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
     .discover-card:hover {
         transform: translateY(-4px);
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
     }
 
-    .discover-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* ============================================ */
+    /* FOOTER — row layout                          */
+    /* ============================================ */
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: left;
+    }
+
+    .footer-contact {
+        text-align: left;
+    }
+
+    .social-icons {
+        margin: 0;
+    }
+
+    .footer-bottom p {
+        display: inline-block;
+        margin: 0 1rem;
     }
 }
