@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore 15+ wildlife species native to Zimbabwe, including elephants, rhinos, lions, and African wild dogs.">
+    <meta name="author" content="Enias Gramu">
+    <title>Wildlife Species — ZWCN</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <meta property="og:title" content="Wildlife Species — ZWCN">
+    <meta property="og:description" content="Explore 15+ wildlife species native to Zimbabwe.">
+    <meta property="og:image" content="https://eniasg.github.io/wdd231/final/images/hero.webp">
+    <meta property="og:url" content="https://eniasg.github.io/wdd231/final/species.html">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wildlife Species — ZWCN">
+    <meta name="twitter:description" content="Explore Zimbabwe's incredible wildlife.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script type="module" src="scripts/species.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="ZWCN logo" width="50" height="50">
+        <span>ZWCN</span>
+        <button id="nav-button" class="hamburger" aria-label="Toggle navigation"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="species.html">Species</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Wildlife Species of Zimbabwe</h1>
+        <p class="page-intro">Discover the incredible wildlife that calls Zimbabwe home. Click any species to learn
+            more.</p>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Endangered">Endangered</button>
+            <button class="filter-btn" data-filter="Vulnerable">Vulnerable</button>
+            <button class="filter-btn" data-filter="Least Concern">Least Concern</button>
+        </div>
+
+        <div class="species-grid" id="species-grid">
+            <p>Loading species…</p>
+        </div>
+
+        <dialog id="species-modal" class="modal">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close dialog" type="button">&times;</button>
+                <div id="modal-body"></div>
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Zimbabwe Wildlife Conservation Network</h3>
+                <p>📍 Harare, Zimbabwe</p>
+                <p>📧 info@zwcn.org.zw</p>
+                <p>📞 (+263) 555-2300</p>
+            </div>
+            <div class="footer-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="#" target="_blank" rel="noopener">Video Walkthrough</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentyear"></span> ZWCN | Enias Gramu | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
