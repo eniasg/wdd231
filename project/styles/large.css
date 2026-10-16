@@ -1,29 +1,19 @@
-/* large.css - ZWCN desktop styles (768px and above) */
+/* ============================================ */
+/* ZWCN — large.css (768px and up)              */
+/* ============================================ */
 
 @media screen and (min-width: 768px) {
 
-    /* Header */
     header {
         grid-template-columns: 60px auto 1fr;
         padding: var(--space-md) 2rem;
     }
+    header img { width: 50px; }
+    header span { font-size: 1.35rem; }
 
-    header img {
-        width: 50px;
-    }
+    .hamburger { display: none; }
 
-    header span {
-        font-size: 1.35rem;
-    }
-
-    .hamburger {
-        display: none;
-    }
-
-    .navigation {
-        display: block !important;
-    }
-
+    .navigation { display: block !important; }
     .navigation ul {
         flex-direction: row;
         justify-content: flex-end;
@@ -31,58 +21,26 @@
         margin: 0 auto;
         padding: 0 2rem;
     }
+    .navigation li { border-bottom: none; }
+    .navigation li a { padding: 0.75rem 1.5rem; }
 
-    .navigation li {
-        border-bottom: none;
-    }
+    main { padding: 2rem; }
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.6rem; }
 
-    .navigation li a {
-        padding: 0.75rem 1.5rem;
-    }
+    .stats { grid-template-columns: repeat(4, 1fr); }
 
-    main {
-        padding: 2rem;
-    }
+    .hero-overlay { padding: 3.5rem 3rem 2.5rem; }
+    .hero-overlay h1 { font-size: 2.5rem; }
+    .hero-overlay p { font-size: 1.15rem; }
 
-    h1 {
-        font-size: 2.25rem;
-    }
-
-    h2 {
-        font-size: 1.6rem;
-    }
-
-    /* Stats — 4 columns */
-    .stats {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    /* Hero text bigger */
-    .hero-overlay {
-        padding: 4rem 3rem 3rem;
-    }
-
-    .hero-overlay h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-overlay p {
-        font-size: 1.15rem;
-    }
-
-    /* Grids — 3 columns */
     .featured-grid,
-    .species-grid {
+    .species-grid,
+    .involvement-options {
         grid-template-columns: repeat(3, 1fr);
         gap: var(--space-lg);
     }
 
-    /* Involvement options — 3 columns */
-    .involvement-options {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* Footer — row layout */
     .footer-content {
         display: flex;
         justify-content: space-between;
@@ -92,17 +50,7 @@
         padding: 2rem;
         text-align: left;
     }
-
-    .footer-info {
-        text-align: left;
-    }
-
-    .footer-links {
-        margin-top: 0;
-    }
-
-    .footer-bottom p {
-        display: inline-block;
-        margin: 0 1rem;
-    }
+    .footer-info { text-align: left; }
+    .footer-links { margin-top: 0; }
+    .footer-bottom p { display: inline-block; margin: 0 1rem; }
 }
