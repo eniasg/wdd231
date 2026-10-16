@@ -1,6 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-    <circle cx="100" cy="100" r="95" fill="#1B5E20" stroke="#FF8F00" stroke-width="4"/>
-    <polygon points="100,40 70,130 85,130 80,145 100,145 100,130 90,130 100,75 110,130 100,130 100,145 120,145 115,130 130,130" fill="#FF8F00"/>
-    <polygon points="145,90 135,90 140,80 130,80 138,67 145,75 152,67 160,80 150,80 155,90" fill="#4CAF50"/>
-    <text x="100" y="170" font-family="Arial" font-size="13" font-weight="bold" fill="#FF8F00" text-anchor="middle">ZWCN</text>
+    <!-- Outer ring -->
+    <circle cx="100" cy="100" r="95" fill="#FFFFFF" stroke="#FF8F00" stroke-width="6"/>
+    <!-- Inner circle with tree silhouette -->
+    <circle cx="100" cy="100" r="80" fill="#1B5E20"/>
+    <!-- African tree silhouette -->
+    <polygon points="100,45 82,88 118,88" fill="#FF8F00"/>
+    <polygon points="100,70 76,110 124,110" fill="#FF8F00"/>
+    <rect x="96" y="105" width="8" height="35" fill="#8B5A2B"/>
+    <!-- Sun -->
+    <circle cx="145" cy="65" r="12" fill="#FF8F00"/>
+    <!-- Text -->
+    <text x="100" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold"
+          fill="#FF8F00" text-anchor="middle" letter-spacing="1">ZWCN</text>
 </svg>
